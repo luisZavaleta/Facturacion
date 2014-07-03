@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+
+#accordion .panel-title a {
+	width: 100%;
+	display: block;
+}
+
+.panel>.panel-heading a span.glyphicon {
+	float: right;
+}
+
+.p-clientes  button {
+	float: right;
+	width: 120px;
+	margin-right: 7px;
+}
+
+.modal-verificar .cabsa  button {
+	float: right;
+	width: 140px;
+	margin-right: 7px;
+}
+
+.val-botones button {
+	float: right;
+	width: 70px;
+	margin-right: 5px;
+}
+
+.modal-verificar .modal-body .panel-group .panel-body .accordion-header
+	{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #E5E5E5;
+	margin-bottom: 10px;
+}
+
+.datos-cliente tr td.titulo,.datos-cabsa tr td.titulo {
+	width: 20%;
+	font-weight: bold;
+	text-align: right;
+}
+
+.datos-cliente tr td.titulo span,.datos-cabsa tr td.titulo span {
+	padding-right: 15px;
+}
+
+.datos-cliente tr td.texto,.datos-cabsa tr td.texto {
+	width: 80%;
+	text-align: left;
+}
+
+
+
+.p-productos .val-codigo {
+	width: 30%;
+	
+}
+
+.p-productos .val-unidad {
+	width: 5%;
+}
+
+.p-productos .val-descripcion {
+	width: 48%;
+}
+
+.p-productos  .val-botones {
+	width: 17%;
+}

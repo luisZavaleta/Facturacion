@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:pfic="http://www.sat.gob.mx/pfic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sello="oJ3DHNsd+OmVObTITGKKExJn1T/KZl3HxovXk5cXPUSCpb0s3b2eCyoFy3Ko/l0Ni58eUq95Do5w2GjEaLUce++1WGl+s8DOb4XAYI+u+aa9m8lR6Ij22hfx8crFPeWe5knbKvXcN2XONZn/v6vZXmnSreA2nIRV9W2RkPWVLL8=" certificado="MIIEZDCCA0ygAwIBAgIUMDAwMDEwMDAwMDAxMDIyMzIyMjIwDQYJKoZIhvcNAQEFBQAwggE2MTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExHzAdBgkqhkiG9w0BCQEWEGFjb2RzQHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEzARBgNVBAcMCkN1YXVodGVtb2MxMzAxBgkqhkiG9w0BCQIMJFJlc3BvbnNhYmxlOiBGZXJuYW5kbyBNYXJ0w61uZXogQ29zczAeFw0xMDExMjMyMzMyNDJaFw0xMjExMjIyMzMyNDJaMIIBAzE3MDUGA1UEAxMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzE3MDUGA1UEKRMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzE3MDUGA1UEChMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzElMCMGA1UELRMcSUFTMDMxMTA0R0NBIC8gUkFSTzgyMDUxMVJZODEeMBwGA1UEBRMVIC8gUkFSTzgyMDUxMU1DTU1CRjAwMQ8wDQYDVQQLEwZVTklEQUQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMfKk6D8zQ/YC43iBOWsda6l3O65EmG0nWzmeDP0lzQba9QwzK0oxPDdzGXB4RNIr6ek3Ln83/j8r4wDA9kZOdIp6RXtyjzLs+4YMlsPmjkG61It+EKBwoqdrbAB/cSx3E1mlX4BgZ7ERA8d64hQtiORsRPOqLrbrH7tlhcsXfMbAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQA9vNpPgwQ5qmgK4/XtfxSmvz21N4Hxx50FTCA8j7g2vJa/I7kqAotXx2xqMs6QKD8KxnWvA2lkgKckv5nHy95jw1/X2mCESw/1dq0K9Oa5dZX/5o5pTRLk/KIpXfCYkGxsR+K/TLyRunRAZEOJbyXcfs6OQ/fLbtkO+abEQhw62nx6fY4E9NSYvcyEd3SFgyxE4hBDjLEqMkKpW6SZkrN/NvsjCmwHghInjQd+17vBjVdcQ5GdpNE8+CUc5cAkIdbRWq+O3M1yqkYTIJAtdtIylmuvu73N6B+4vG7KFpInpHBfSIsUY/ccmKzvzgGoiwe6p3XkPPv4CRktMSJGz6gr" fecha="2011-06-28T18:24:09" version="3.2" xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/pfic http://www.sat.gob.mx/sitio_internet/cfd/pfic/pfic.xsd" serie="8" folio="3" formaDePago="PAGO EN UNA SOLA EXHIBICION" noCertificado="20001000000100004027" metodoDePago="Efectivo" subTotal="7069.00" TipoCambio="1" Moneda="PESO" total="8200.04" tipoDeComprobante="ingreso" NumCtaPago="123456"  LugarExpedicion="manzanillo"  FolioFiscalOrig="23480727-43C3-40C4-A866-356152786D86" SerieFolioFiscalOrig="A" FechaFolioFiscalOrig="2011-12-18T00:00:00" MontoFolioFiscalOrig="125.21">
+  <cfdi:Emisor rfc="PNU1111251F3" nombre="INTEGRADORA ADUANAL Y DE SERVICIOS WOODWARD S.C.">
+    <cfdi:DomicilioFiscal calle="AV. TENIENTE AZUETA" noExterior="25-1" colonia="BUROCRATA" localidad="MANZANILLO" municipio="MANZANILLO" estado="COLIMA" pais="MEXICO" codigoPostal="28250"/><cfdi:RegimenFiscal Regimen="regimen 1" /><cfdi:RegimenFiscal Regimen="regimen 2" />
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="XEXX010101000" nombre="TRADING SERVICES CORPORATION.">
+    <cfdi:Domicilio calle="1705 E HILLSIDE RD STE." noExterior="1" localidad="LAREDO" referencia="LAREDO" municipio="LAREDO" estado="TEXAS" pais="USA" codigoPostal="78041"/>
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="inicio SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+   <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+   <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+   <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+	<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+   <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+	<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+   <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS" valorUnitario="2000.00" importe="2000.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00" importe="500.00"/>
+    <cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS" valorUnitario="4569.00" importe="4569.00"/>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="1131.04">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16" importe="1131.04"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <pfic:PFintegranteCoordinado version="1.0" ClaveVehicular="Nissan Altima" Placa="FBR1030" RFCPF="AAAA101010AF1"  />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

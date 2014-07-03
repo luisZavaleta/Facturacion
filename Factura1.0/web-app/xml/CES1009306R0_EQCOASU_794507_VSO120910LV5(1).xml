@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.2"
+	xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd"
+	serie="EQCOASU" folio="794507" fecha="2013-12-23T06:40:25"
+	sello="W6KQr8DsxDsn07WcFrEw8ymDTOpdQ8nt0Y1egq80D8588QbZEO2ZpfwTomOtgqbvGbeULI2SMsCXhsx9kLHGw+pnmEWwbEoi546uTM7SW0tYkWCfR5ruggNya/b3I0u+5/ivdBJueZphE1uXbEXl91I2n40qMdiwwAChP3wRDUw="
+	formaDePago="En una sola exhibición" noCertificado="00001000000202431749"
+	certificado="MIIEijCCA3KgAwIBAgIUMDAwMDEwMDAwMDAyMDI0MzE3NDkwDQYJKoZIhvcNAQEFBQAwggGVMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMSEwHwYJKoZIhvcNAQkBFhJhc2lzbmV0QHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxFDASBgNVBAcMC0N1YXVodMOpbW9jMRUwEwYDVQQtEwxTQVQ5NzA3MDFOTjMxPjA8BgkqhkiG9w0BCQIML1Jlc3BvbnNhYmxlOiBDZWNpbGlhIEd1aWxsZXJtaW5hIEdhcmPDrWEgR3VlcnJhMB4XDTEyMTEyNjIwMjk1OVoXDTE2MTEyNjIwMjk1OVowgcsxJjAkBgNVBAMTHUNNIEVRVUlQT1MgWSBTT1BPUlRFIFNBIERFIENWMSYwJAYDVQQpEx1DTSBFUVVJUE9TIFkgU09QT1JURSBTQSBERSBDVjEmMCQGA1UEChMdQ00gRVFVSVBPUyBZIFNPUE9SVEUgU0EgREUgQ1YxJTAjBgNVBC0THENFUzEwMDkzMDZSMCAvIFZJU1I3MDA0MjgyUjgxHjAcBgNVBAUTFSAvIFZJU1I3MDA0MjhIREZMTEMwODEKMAgGA1UECxMBIDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAplJqYrsq1aQxbCSokRHQAWtX7mRdEHSMP6UcQ6QJCcSxicqaRoV5mrc3/TJYkKvvuHry6sc2qzm5R7/EFRVwpgUPZZvmWnWZVepGkZXFSMA8Y5vxXxrXEetbLoc9qvvJlOT/kH/ocR/ijQS+inVWf044jyxdl+lqpyDlCYYvOhsCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAIS7r588jkCX20Yn7xyA+nXoTaT2J/zRtcF6rAdY2dw0iHOB3mwN4x9mylVSxI6+Cbb34f0Z9tIX9ys7Edt51i5EASILXAs+vA+AjuzTSLLwxPBmca1lcRZIZkLhMJ8N4CyrHek82F0inEFPVWOtPF5yPf2H/udPhqtsC50ovBQhWDg7htEVzJRFvvv2EFUPXJXd0+xYpvhG07RICJoBcvqcCYu0qDfpncDtzsa7ddfxH4FkYaFh0f3PaGCv3qLcGeJxcdDgAZvMvNLjb4BinfKzg8hx7ysyestRnsR5qgTx0TqnZHgDWPP/NlUvWVTw48FmA5UaZERw/mgVqttWVrQ="
+	condicionesDePago="Contado" subTotal="129.31" descuento="0.00" total="150.00"
+	tipoDeComprobante="ingreso" metodoDePago="No identificado"
+	LugarExpedicion="Coatzacoalcos, Veracruz" TipoCambio="1.0000" Moneda="MXN">
+	<cfdi:Emisor rfc="CES1009306R0" nombre="CM Equipos y Soporte, S.A. de C.V.">
+		<cfdi:DomicilioFiscal calle="Sevilla" noExterior="4"
+			noInterior="Piso 6" colonia="Col. Juarez" municipio="Del. Cuauhtemoc"
+			estado="Distrito Federal" pais="México" codigoPostal="06600" />
+		<cfdi:RegimenFiscal Regimen="Consolidación fiscal" />
+	</cfdi:Emisor>
+	<cfdi:Receptor rfc="VSO120910LV5"
+		nombre="VULCANO SOFWARE SA DE CV VULCANO SOFWARE SA DE CV">
+		<cfdi:Domicilio calle="18 DE MARZO" noExterior="2200"
+			colonia="PUERTO MEXICO" referencia="PRI 18 DE MARZO, A M RIVERA"
+			municipio="COATZACOALCOS" estado="VERACRUZ" pais="México"
+			codigoPostal="96510" />
+	</cfdi:Receptor>
+	<cfdi:Conceptos>
+		<cfdi:Concepto cantidad="1.0000" unidad="SERVICIO"
+			noIdentificacion="3075527" descripcion="Renta de Equipos para Telefonia"
+			valorUnitario="129.31" importe="129.31" />
+	</cfdi:Conceptos>
+	<cfdi:Impuestos totalImpuestosTrasladados="20.69">
+		<cfdi:Traslados>
+			<cfdi:Traslado impuesto="IVA" tasa="16.00" importe="20.69" />
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+	<cfdi:Complemento>
+		<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" FechaTimbrado="2013-12-24T21:12:01"
+			UUID="5CF3BE94-351C-D25B-38A9-3BDCFD3E3FE3" noCertificadoSAT="00001000000202771790"
+			selloCFD="W6KQr8DsxDsn07WcFrEw8ymDTOpdQ8nt0Y1egq80D8588QbZEO2ZpfwTomOtgqbvGbeULI2SMsCXhsx9kLHGw+pnmEWwbEoi546uTM7SW0tYkWCfR5ruggNya/b3I0u+5/ivdBJueZphE1uXbEXl91I2n40qMdiwwAChP3wRDUw="
+			selloSAT="UITHfNTYMTMDyZo3Cbl5q/v8eBpUNAnig0KAPiay/z0HatfSxf/8mse8sh3jX4hCl9/EfjtdUp+q80n/woCeHjNiWICf7SEPwSLPg1TE0rIt0M+zMSiLY/xIFQGz7bKGnYSouhsn6LGyDoGQRI8827RqdUJ9vhqGWjw051Q2qLk="
+			version="1.0"
+			xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd" />
+	</cfdi:Complemento>
+</cfdi:Comprobante>

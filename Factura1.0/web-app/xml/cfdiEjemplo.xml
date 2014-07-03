@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Comprobante version="2.2" serie="str1234" folio="str1234"
+	fecha="2012-12-13T12:12:12" sello="str1234" noAprobacion="1234"
+	anoAprobacion="1234" formaDePago="str1234" noCertificado="str12340000000000000"
+	certificado="str1234" condicionesDePago="str1234" subTotal="123.45"
+	descuento="123.45" motivoDescuento="str1234" TipoCambio="str1234"
+	Moneda="str1234" total="123.45" tipoDeComprobante="ingreso"
+	metodoDePago="str1234" LugarExpedicion="str1234" NumCtaPago="str1234"
+	FolioFiscalOrig="str1234" SerieFolioFiscalOrig="str1234"
+	FechaFolioFiscalOrig="2012-12-13T12:12:12" MontoFolioFiscalOrig="123.45">
+	<Emisor rfc="str123400000" nombre="str1234">
+		<DomicilioFiscal calle="str1234" noExterior="str1234"
+			noInterior="str1234" colonia="str1234" localidad="str1234"
+			referencia="str1234" municipio="str1234" estado="str1234" pais="str1234"
+			codigoPostal="str12" />
+		<ExpedidoEn calle="str1234" noExterior="str1234"
+			noInterior="str1234" colonia="str1234" localidad="str1234"
+			referencia="str1234" municipio="str1234" estado="str1234" pais="str1234"
+			codigoPostal="str1234" />
+		<RegimenFiscal Regimen="str1234" />
+	</Emisor>
+	<Receptor rfc="str123400000" nombre="str1234">
+		<Domicilio calle="str1234" noExterior="str1234" noInterior="str1234"
+			colonia="str1234" localidad="str1234" referencia="str1234" municipio="str1234"
+			estado="str1234" pais="str1234" codigoPostal="str1234" />
+	</Receptor>
+	<Conceptos>
+		<Concepto cantidad="123.45" unidad="str1234"
+			noIdentificacion="str1234" descripcion="str1234" valorUnitario="123.45"
+			importe="123.45" />
+	</Conceptos>
+	<Impuestos totalImpuestosRetenidos="123.45"
+		totalImpuestosTrasladados="123.45">
+		<Retenciones>
+			<Retencion impuesto="ISR" importe="123.45" />
+		</Retenciones>
+		<Traslados>
+			<Traslado impuesto="IVA" tasa="123.45" importe="123.45" />
+		</Traslados>
+	</Impuestos>
+	<Complemento />
+	<Addenda />
+</Comprobante>

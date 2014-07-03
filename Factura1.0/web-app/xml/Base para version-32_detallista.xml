@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+	xmlns:detallista="http://www.sat.gob.mx/detallista"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	sello="oJ3DHNsd+OmVObTITGKKExJn1T/KZl3HxovXk5cXPUSCpb0s3b2eCyoFy3Ko/l0Ni58eUq95Do5w2GjEaLUce++1WGl+s8DOb4XAYI+u+aa9m8lR6Ij22hfx8crFPeWe5knbKvXcN2XONZn/v6vZXmnSreA2nIRV9W2RkPWVLL8="
+	certificado="MIIEZDCCA0ygAwIBAgIUMDAwMDEwMDAwMDAxMDIyMzIyMjIwDQYJKoZIhvcNAQEFBQAwggE2MTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExHzAdBgkqhkiG9w0BCQEWEGFjb2RzQHNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEzARBgNVBAcMCkN1YXVodGVtb2MxMzAxBgkqhkiG9w0BCQIMJFJlc3BvbnNhYmxlOiBGZXJuYW5kbyBNYXJ0w61uZXogQ29zczAeFw0xMDExMjMyMzMyNDJaFw0xMjExMjIyMzMyNDJaMIIBAzE3MDUGA1UEAxMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzE3MDUGA1UEKRMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzE3MDUGA1UEChMuSU5URUdSQURPUkEgQURVQU5BTCBZIERFIFNFUlZJQ0lPUyBXT09EV0FSRCBTQzElMCMGA1UELRMcSUFTMDMxMTA0R0NBIC8gUkFSTzgyMDUxMVJZODEeMBwGA1UEBRMVIC8gUkFSTzgyMDUxMU1DTU1CRjAwMQ8wDQYDVQQLEwZVTklEQUQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMfKk6D8zQ/YC43iBOWsda6l3O65EmG0nWzmeDP0lzQba9QwzK0oxPDdzGXB4RNIr6ek3Ln83/j8r4wDA9kZOdIp6RXtyjzLs+4YMlsPmjkG61It+EKBwoqdrbAB/cSx3E1mlX4BgZ7ERA8d64hQtiORsRPOqLrbrH7tlhcsXfMbAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBBQUAA4IBAQA9vNpPgwQ5qmgK4/XtfxSmvz21N4Hxx50FTCA8j7g2vJa/I7kqAotXx2xqMs6QKD8KxnWvA2lkgKckv5nHy95jw1/X2mCESw/1dq0K9Oa5dZX/5o5pTRLk/KIpXfCYkGxsR+K/TLyRunRAZEOJbyXcfs6OQ/fLbtkO+abEQhw62nx6fY4E9NSYvcyEd3SFgyxE4hBDjLEqMkKpW6SZkrN/NvsjCmwHghInjQd+17vBjVdcQ5GdpNE8+CUc5cAkIdbRWq+O3M1yqkYTIJAtdtIylmuvu73N6B+4vG7KFpInpHBfSIsUY/ccmKzvzgGoiwe6p3XkPPv4CRktMSJGz6gr"
+	fecha="2011-06-28T18:24:09" version="3.2"
+	xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/detallista http://www.sat.gob.mx/sitio_internet/cfd/detallista/detallista.xsd"
+	serie="8" folio="3" formaDePago="PAGO EN UNA SOLA EXHIBICION"
+	noCertificado="20001000000100004027" metodoDePago="Efectivo" subTotal="7069.00" TipoCambio="1"
+	Moneda="PESO" total="8200.04" tipoDeComprobante="ingreso" NumCtaPago="123456"
+	LugarExpedicion="manzanillo" FolioFiscalOrig="23480727-43C3-40C4-A866-356152786D86"
+	SerieFolioFiscalOrig="A" FechaFolioFiscalOrig="2011-12-18T00:00:00"
+	MontoFolioFiscalOrig="125.21">
+	<cfdi:Emisor rfc="PNU1111251F3" nombre="INTEGRADORA ADUANAL Y DE SERVICIOS WOODWARD S.C.">
+		<cfdi:DomicilioFiscal calle="AV. TENIENTE AZUETA" noExterior="25-1" colonia="BUROCRATA"
+			localidad="MANZANILLO" municipio="MANZANILLO" estado="COLIMA" pais="MEXICO"
+			codigoPostal="28250"/>
+		<cfdi:RegimenFiscal Regimen="regimen 1"/>
+		<cfdi:RegimenFiscal Regimen="regimen 2"/>
+	</cfdi:Emisor>
+	<cfdi:Receptor rfc="XEXX010101000" nombre="TRADING SERVICES CORPORATION.">
+		<cfdi:Domicilio calle="1705 E HILLSIDE RD STE." noExterior="1" localidad="LAREDO"
+			referencia="LAREDO" municipio="LAREDO" estado="TEXAS" pais="USA" codigoPostal="78041"/>
+	</cfdi:Receptor>
+	<cfdi:Conceptos>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="inicio SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="SERVICIOS COMPLEMENTARIOS"
+			valorUnitario="2000.00" importe="2000.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="PREVIO" valorUnitario="500.00"
+			importe="500.00"/>
+		<cfdi:Concepto cantidad="1" unidad="SERVICIO" descripcion="ultimo HONORARIOS"
+			valorUnitario="4569.00" importe="4569.00"/>
+	</cfdi:Conceptos>
+	<cfdi:Impuestos totalImpuestosTrasladados="1131.04">
+		<cfdi:Traslados>
+			<cfdi:Traslado impuesto="IVA" tasa="16" importe="1131.04"/>
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+	<cfdi:Complemento>
+		<detallista:detallista type="SimpleInvoiceType" contentVersion="1.3.1"
+			documentStructureVersion="AMC8.1" documentStatus="ORIGINAL"
+			xmlns="http://www.sat.gob.mx/detallista">
+			<detallista:requestForPaymentIdentification>
+				<detallista:entityType>INVOICE</detallista:entityType>
+			</detallista:requestForPaymentIdentification>
+			<detallista:specialInstruction code="AAB"
+				>text<detallista:text>text1</detallista:text><detallista:text>text2</detallista:text><detallista:text>text3</detallista:text></detallista:specialInstruction>
+			<detallista:specialInstruction code="DUT"
+				>text<detallista:text>text4</detallista:text><detallista:text>text5</detallista:text><detallista:text>text6</detallista:text></detallista:specialInstruction>
+			<detallista:specialInstruction code="PUR"
+				>text<detallista:text>text7</detallista:text><detallista:text>text8</detallista:text><detallista:text>text9</detallista:text></detallista:specialInstruction>
+			<detallista:orderIdentification>
+				<detallista:referenceIdentification type="ON">referenceIdentification1</detallista:referenceIdentification>
+				<detallista:referenceIdentification type="ON">referenceIdentification2</detallista:referenceIdentification>
+				<detallista:referenceIdentification type="ON">referenceIdentification3</detallista:referenceIdentification>
+				<detallista:ReferenceDate>1900-01-01</detallista:ReferenceDate>
+			</detallista:orderIdentification>
+			<detallista:AdditionalInformation>
+				<detallista:referenceIdentification type="AAE">referenceIdentification1</detallista:referenceIdentification>
+				<detallista:referenceIdentification type="CK">referenceIdentification2</detallista:referenceIdentification>
+				<detallista:referenceIdentification type="ACE">referenceIdentification3</detallista:referenceIdentification>
+			</detallista:AdditionalInformation>
+			<detallista:DeliveryNote>
+				<detallista:referenceIdentification>referenceIdentification1</detallista:referenceIdentification>
+				<detallista:referenceIdentification>referenceIdentification2</detallista:referenceIdentification>
+				<detallista:referenceIdentification>referenceIdentification3</detallista:referenceIdentification>
+				<detallista:ReferenceDate>1900-01-01</detallista:ReferenceDate>
+			</detallista:DeliveryNote>
+			<detallista:buyer>
+				<detallista:gln>gln_________1</detallista:gln>
+				<detallista:contactInformation>
+					<detallista:personOrDepartmentName>
+						<detallista:text>text1</detallista:text>
+					</detallista:personOrDepartmentName>
+				</detallista:contactInformation>
+			</detallista:buyer>
+			<detallista:seller>
+				<detallista:gln>gln_________1</detallista:gln>
+				<detallista:alternatePartyIdentification type="SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY">alternatePartyIdentification1</detallista:alternatePartyIdentification>
+			</detallista:seller>
+			<detallista:shipTo>
+				<detallista:gln>gln_________1</detallista:gln>
+				<detallista:nameAndAddress>
+					<detallista:name>name1</detallista:name>
+					<detallista:streetAddressOne>streetAddressOne1</detallista:streetAddressOne>
+					<detallista:city>city1</detallista:city>
+					<detallista:postalCode>postalCo1</detallista:postalCode>
+					<detallista:name>name2</detallista:name>
+					<detallista:streetAddressOne>streetAddressOne2</detallista:streetAddressOne>
+					<detallista:city>city2</detallista:city>
+					<detallista:postalCode>postalCo2</detallista:postalCode>
+					<detallista:name>name3</detallista:name>
+					<detallista:streetAddressOne>streetAddressOne3</detallista:streetAddressOne>
+					<detallista:city>city3</detallista:city>
+					<detallista:postalCode>postalCo3</detallista:postalCode>
+				</detallista:nameAndAddress>
+			</detallista:shipTo>
+			<detallista:InvoiceCreator>
+				<detallista:gln>gln_________1</detallista:gln>
+				<detallista:alternatePartyIdentification type="VA">alternatePartyIdentification1</detallista:alternatePartyIdentification>
+				<detallista:nameAndAddress>
+					<detallista:name>name1</detallista:name>
+					<detallista:streetAddressOne>streetAddressOne1</detallista:streetAddressOne>
+					<detallista:city>city1</detallista:city>
+					<detallista:postalCode>postalCo1</detallista:postalCode>
+				</detallista:nameAndAddress>
+			</detallista:InvoiceCreator>
+			<detallista:Customs>
+				<detallista:gln>gln_________1</detallista:gln>
+			</detallista:Customs>
+			<detallista:Customs>
+				<detallista:gln>gln_________2</detallista:gln>
+			</detallista:Customs>
+			<detallista:Customs>
+				<detallista:gln>gln_________3</detallista:gln>
+			</detallista:Customs>
+			<detallista:currency currencyISOCode="MXN">
+				<detallista:currencyFunction>BILLING_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PRICE_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PAYMENT_CURRENCY</detallista:currencyFunction>
+				<detallista:rateOfChange>1</detallista:rateOfChange>
+			</detallista:currency>
+			<detallista:currency currencyISOCode="XEU">
+				<detallista:currencyFunction>BILLING_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PRICE_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PAYMENT_CURRENCY</detallista:currencyFunction>
+				<detallista:rateOfChange>-79228162514264337593543950335</detallista:rateOfChange>
+			</detallista:currency>
+			<detallista:currency currencyISOCode="USD">
+				<detallista:currencyFunction>BILLING_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PRICE_CURRENCY</detallista:currencyFunction>
+				<detallista:currencyFunction>PAYMENT_CURRENCY</detallista:currencyFunction>
+				<detallista:rateOfChange>335</detallista:rateOfChange>
+			</detallista:currency>
+			<detallista:paymentTerms paymentTermsEvent="DATE_OF_INVOICE"
+				PaymentTermsRelationTime="REFERENCE_AFTER">
+				<detallista:netPayment netPaymentTermsType="BASIC_NET">
+					<detallista:paymentTimePeriod>
+						<detallista:timePeriodDue timePeriod="DAYS">
+							<detallista:value>2</detallista:value>
+						</detallista:timePeriodDue>
+					</detallista:paymentTimePeriod>
+				</detallista:netPayment>
+				<detallista:discountPayment discountType="ALLOWANCE_BY_PAYMENT_ON_TIME">
+					<detallista:percentage>perc1</detallista:percentage>
+				</detallista:discountPayment>
+			</detallista:paymentTerms>
+			<detallista:shipmentDetail/>
+			<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+				settlementType="BILL_BACK" sequenceNumber="sequenceNumber1">
+				<detallista:specialServicesType>AA</detallista:specialServicesType>
+				<detallista:monetaryAmountOrPercentage>
+					<detallista:rate base="INVOICE_VALUE">
+						<detallista:percentage>1</detallista:percentage>
+					</detallista:rate>
+				</detallista:monetaryAmountOrPercentage>
+			</detallista:allowanceCharge>
+			<detallista:allowanceCharge allowanceChargeType="CHARGE_GLOBAL"
+				settlementType="OFF_INVOICE" sequenceNumber="sequenceNumber2">
+				<detallista:specialServicesType>AJ</detallista:specialServicesType>
+				<detallista:monetaryAmountOrPercentage>
+					<detallista:rate base="INVOICE_VALUE">
+						<detallista:percentage>335</detallista:percentage>
+					</detallista:rate>
+				</detallista:monetaryAmountOrPercentage>
+			</detallista:allowanceCharge>
+			<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+				settlementType="BILL_BACK" sequenceNumber="sequenceNumber3">
+				<detallista:specialServicesType>ADO</detallista:specialServicesType>
+				<detallista:monetaryAmountOrPercentage>
+					<detallista:rate base="INVOICE_VALUE">
+						<detallista:percentage>35</detallista:percentage>
+					</detallista:rate>
+				</detallista:monetaryAmountOrPercentage>
+			</detallista:allowanceCharge>
+			<detallista:lineItem type="SimpleInvoiceLineItemType" number="1">
+				<detallista:tradeItemIdentification>
+					<detallista:gtin>gtin1</detallista:gtin>
+				</detallista:tradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="BUYER_ASSIGNED">textalternateTradeItemIdentification1</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">textalternateTradeItemIdentification2</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="SERIAL_NUMBER">textalternateTradeItemIdentification3</detallista:alternateTradeItemIdentification>
+				<detallista:tradeItemDescriptionInformation language="ES">
+					<detallista:longText>longText1</detallista:longText>
+				</detallista:tradeItemDescriptionInformation>
+				<detallista:invoicedQuantity unitOfMeasure="Token1">1</detallista:invoicedQuantity>
+				<detallista:aditionalQuantity QuantityType="NUM_CONSUMER_UNITS"
+					>1</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="FREE_GOODS"
+					>950335</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="NUM_CONSUMER_UNITS"
+					>335</detallista:aditionalQuantity>
+				<detallista:grossPrice>
+					<detallista:Amount>1</detallista:Amount>
+				</detallista:grossPrice>
+				<detallista:netPrice>
+					<detallista:Amount>1</detallista:Amount>
+				</detallista:netPrice>
+				<detallista:AdditionalInformation>
+					<detallista:referenceIdentification type="ON">referenceIdentification1</detallista:referenceIdentification>
+				</detallista:AdditionalInformation>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name1</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>2011-01-01</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification1</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________1</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name2</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>2011-01-01</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification2</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________2</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name3</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>2011-12-31</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification3</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________3</detallista:gln>
+				</detallista:Customs>
+				<detallista:LogisticUnits>
+					<detallista:serialShippingContainerCode type="BJ">serialShippingContainerCode1</detallista:serialShippingContainerCode>
+				</detallista:LogisticUnits>
+				<detallista:palletInformation>
+					<detallista:transport>
+						<detallista:methodOfPayment>PREPAID_BY_SELLER</detallista:methodOfPayment>
+					</detallista:transport>
+					<detallista:description type="EXCHANGE_PALLETS">textdescription1</detallista:description>
+					<detallista:palletQuantity>palletQuantity1</detallista:palletQuantity>
+				</detallista:palletInformation>
+				<detallista:extendedAttributes>
+					<detallista:lotNumber productionDate="1900-01-01">lotNumber1</detallista:lotNumber>
+					<detallista:lotNumber productionDate="0001-01-01">lotNumber2</detallista:lotNumber>
+					<detallista:lotNumber productionDate="9999-12-31">lotNumber3</detallista:lotNumber>
+				</detallista:extendedAttributes>
+				<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+					settlementType="OFF_INVOICE" sequenceNumber="sequenceNumber1">
+					<detallista:specialServicesType>AA</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc1</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou1</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="CHARGE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_VENDOR" sequenceNumber="sequenceNumber2">
+					<detallista:specialServicesType>ADS</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc2</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou2</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_CUSTOMER" sequenceNumber="sequenceNumber3">
+					<detallista:specialServicesType>ADO</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc3</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou3</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>TRANSFERIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>1</detallista:taxPercentage>
+						<detallista:taxAmount>1</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber1</detallista:referenceNumber>
+					<detallista:taxTypeDescription>GST</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>RETENIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>5</detallista:taxPercentage>
+						<detallista:taxAmount>35</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber2</detallista:referenceNumber>
+					<detallista:taxTypeDescription>VAT</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>TRANSFERIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>5</detallista:taxPercentage>
+						<detallista:taxAmount>5</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber3</detallista:referenceNumber>
+					<detallista:taxTypeDescription>LAC</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:totalLineAmount>
+					<detallista:grossAmount>
+						<detallista:Amount>1</detallista:Amount>
+					</detallista:grossAmount>
+					<detallista:netAmount>
+						<detallista:Amount>1</detallista:Amount>
+					</detallista:netAmount>
+				</detallista:totalLineAmount>
+			</detallista:lineItem>
+			<detallista:lineItem type="type1" number="-99999">
+				<detallista:tradeItemIdentification>
+					<detallista:gtin>gtin2</detallista:gtin>
+				</detallista:tradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="GLOBAL_TRADE_ITEM_IDENTIFICATION">textalternateTradeItemIdentification4</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="BUYER_ASSIGNED">textalternateTradeItemIdentification5</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="SUPPLIER_ASSIGNED">textalternateTradeItemIdentification6</detallista:alternateTradeItemIdentification>
+				<detallista:tradeItemDescriptionInformation language="EN">
+					<detallista:longText>longText2</detallista:longText>
+				</detallista:tradeItemDescriptionInformation>
+				<detallista:invoicedQuantity unitOfMeasure="Token2">35</detallista:invoicedQuantity>
+				<detallista:aditionalQuantity QuantityType="FREE_GOODS"
+					>0.9</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="NUM_CONSUMER_UNITS"
+					>1.1</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="FREE_GOODS"
+					>3950335</detallista:aditionalQuantity>
+				<detallista:grossPrice>
+					<detallista:Amount>-79228162514264337593543950335</detallista:Amount>
+				</detallista:grossPrice>
+				<detallista:netPrice>
+					<detallista:Amount>-79228162514264337593543950335</detallista:Amount>
+				</detallista:netPrice>
+				<detallista:AdditionalInformation>
+					<detallista:referenceIdentification type="ON">referenceIdentification2</detallista:referenceIdentification>
+				</detallista:AdditionalInformation>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name4</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>1899-11-30</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification4</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________4</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name5</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>1900-02-02</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification5</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________5</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name6</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>0001-02-02</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification6</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________6</detallista:gln>
+				</detallista:Customs>
+				<detallista:LogisticUnits>
+					<detallista:serialShippingContainerCode type="SRV">serialShippingContainerCode2</detallista:serialShippingContainerCode>
+				</detallista:LogisticUnits>
+				<detallista:palletInformation>
+					<detallista:transport>
+						<detallista:methodOfPayment>PAID_BY_BUYER</detallista:methodOfPayment>
+					</detallista:transport>
+					<detallista:description type="RETURN_PALLETS">textdescription2</detallista:description>
+					<detallista:palletQuantity>palletQuantity2</detallista:palletQuantity>
+				</detallista:palletInformation>
+				<detallista:extendedAttributes>
+					<detallista:lotNumber productionDate="1899-11-30">lotNumber4</detallista:lotNumber>
+					<detallista:lotNumber productionDate="1900-02-02">lotNumber5</detallista:lotNumber>
+					<detallista:lotNumber productionDate="0001-02-02">lotNumber6</detallista:lotNumber>
+				</detallista:extendedAttributes>
+				<detallista:allowanceCharge allowanceChargeType="CHARGE_GLOBAL"
+					settlementType="OFF_INVOICE" sequenceNumber="sequenceNumber4">
+					<detallista:specialServicesType>ABZ</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc4</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou4</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_VENDOR" sequenceNumber="sequenceNumber5">
+					<detallista:specialServicesType>DA</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc5</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou5</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="CHARGE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_CUSTOMER" sequenceNumber="sequenceNumber6">
+					<detallista:specialServicesType>EAA</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc6</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou6</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>RETENIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>0.9</detallista:taxPercentage>
+						<detallista:taxAmount>0.9</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber4</detallista:referenceNumber>
+					<detallista:taxTypeDescription>AAA</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>TRANSFERIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>1.1</detallista:taxPercentage>
+						<detallista:taxAmount>1.1</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber5</detallista:referenceNumber>
+					<detallista:taxTypeDescription>ADD</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>RETENIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>35</detallista:taxPercentage>
+						<detallista:taxAmount>50335</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber6</detallista:referenceNumber>
+					<detallista:taxTypeDescription>FRE</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:totalLineAmount>
+					<detallista:grossAmount>
+						<detallista:Amount>35</detallista:Amount>
+					</detallista:grossAmount>
+					<detallista:netAmount>
+						<detallista:Amount>950335</detallista:Amount>
+					</detallista:netAmount>
+				</detallista:totalLineAmount>
+			</detallista:lineItem>
+			<detallista:lineItem type="type2" number="99999">
+				<detallista:tradeItemIdentification>
+					<detallista:gtin>gtin3</detallista:gtin>
+				</detallista:tradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="SERIAL_NUMBER">textalternateTradeItemIdentification7</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="GLOBAL_TRADE_ITEM_IDENTIFICATION">textalternateTradeItemIdentification8</detallista:alternateTradeItemIdentification>
+				<detallista:alternateTradeItemIdentification type="BUYER_ASSIGNED">textalternateTradeItemIdentification9</detallista:alternateTradeItemIdentification>
+				<detallista:tradeItemDescriptionInformation language="ES">
+					<detallista:longText>longText3</detallista:longText>
+				</detallista:tradeItemDescriptionInformation>
+				<detallista:invoicedQuantity unitOfMeasure="Token3"
+					>335</detallista:invoicedQuantity>
+				<detallista:aditionalQuantity QuantityType="NUM_CONSUMER_UNITS"
+					>93543950335</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="FREE_GOODS"
+					>0.8</detallista:aditionalQuantity>
+				<detallista:aditionalQuantity QuantityType="NUM_CONSUMER_UNITS"
+					>1.2</detallista:aditionalQuantity>
+				<detallista:grossPrice>
+					<detallista:Amount>5</detallista:Amount>
+				</detallista:grossPrice>
+				<detallista:netPrice>
+					<detallista:Amount>35</detallista:Amount>
+				</detallista:netPrice>
+				<detallista:AdditionalInformation>
+					<detallista:referenceIdentification type="ON">referenceIdentification3</detallista:referenceIdentification>
+				</detallista:AdditionalInformation>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name7</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>9999-11-29</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification7</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________7</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name8</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>1899-10-29</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification8</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________8</detallista:gln>
+				</detallista:Customs>
+				<detallista:Customs>
+					<detallista:nameAndAddress>
+						<detallista:name>name9</detallista:name>
+					</detallista:nameAndAddress>
+					<detallista:ReferenceDate>1900-03-06</detallista:ReferenceDate>
+					<detallista:alternatePartyIdentification type="TN">alternatePartyIdentification9</detallista:alternatePartyIdentification>
+					<detallista:gln>gln_________9</detallista:gln>
+				</detallista:Customs>
+				<detallista:LogisticUnits>
+					<detallista:serialShippingContainerCode type="BJ">serialShippingContainerCode3</detallista:serialShippingContainerCode>
+				</detallista:LogisticUnits>
+				<detallista:palletInformation>
+					<detallista:transport>
+						<detallista:methodOfPayment>PREPAID_BY_SELLER</detallista:methodOfPayment>
+					</detallista:transport>
+					<detallista:description type="PALLET_80x100">textdescription3</detallista:description>
+					<detallista:palletQuantity>palletQuantity3</detallista:palletQuantity>
+				</detallista:palletInformation>
+				<detallista:extendedAttributes>
+					<detallista:lotNumber productionDate="2011-11-29">lotNumber7</detallista:lotNumber>
+					<detallista:lotNumber productionDate="2011-10-29">lotNumber8</detallista:lotNumber>
+					<detallista:lotNumber productionDate="2011-03-06">lotNumber9</detallista:lotNumber>
+				</detallista:extendedAttributes>
+				<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+					settlementType="OFF_INVOICE" sequenceNumber="sequenceNumber7">
+					<detallista:specialServicesType>PI</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc7</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou7</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="CHARGE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_VENDOR" sequenceNumber="sequenceNumber8">
+					<detallista:specialServicesType>TAE</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc8</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou8</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:allowanceCharge allowanceChargeType="ALLOWANCE_GLOBAL"
+					settlementType="CHARGE_TO_BE_PAID_BY_CUSTOMER" sequenceNumber="sequenceNumber9">
+					<detallista:specialServicesType>SAB</detallista:specialServicesType>
+					<detallista:monetaryAmountOrPercentage>
+						<detallista:percentagePerUnit>perc9</detallista:percentagePerUnit>
+						<detallista:ratePerUnit>
+							<detallista:amountPerUnit>amou9</detallista:amountPerUnit>
+						</detallista:ratePerUnit>
+					</detallista:monetaryAmountOrPercentage>
+				</detallista:allowanceCharge>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>TRANSFERIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>79228162514264337593543950335</detallista:taxPercentage>
+						<detallista:taxAmount>79228162514264337593543950335</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber7</detallista:referenceNumber>
+					<detallista:taxTypeDescription>LOC</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>RETENIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>0.8</detallista:taxPercentage>
+						<detallista:taxAmount>0.8</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber8</detallista:referenceNumber>
+					<detallista:taxTypeDescription>STT</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:tradeItemTaxInformation>
+					<detallista:taxCategory>TRANSFERIDO</detallista:taxCategory>
+					<detallista:tradeItemTaxAmount>
+						<detallista:taxPercentage>1.2</detallista:taxPercentage>
+						<detallista:taxAmount>1.2</detallista:taxAmount>
+					</detallista:tradeItemTaxAmount>
+					<detallista:referenceNumber>referenceNumber9</detallista:referenceNumber>
+					<detallista:taxTypeDescription>OTH</detallista:taxTypeDescription>
+				</detallista:tradeItemTaxInformation>
+				<detallista:totalLineAmount>
+					<detallista:grossAmount>
+						<detallista:Amount>335</detallista:Amount>
+					</detallista:grossAmount>
+					<detallista:netAmount>
+						<detallista:Amount>50335</detallista:Amount>
+					</detallista:netAmount>
+				</detallista:totalLineAmount>
+			</detallista:lineItem>
+			<detallista:totalAmount>
+				<detallista:Amount>1</detallista:Amount>
+			</detallista:totalAmount>
+			<detallista:TotalAllowanceCharge allowanceOrChargeType="ALLOWANCE">
+				<detallista:specialServicesType>AA</detallista:specialServicesType>
+				<detallista:Amount>1</detallista:Amount>
+			</detallista:TotalAllowanceCharge>
+			<detallista:TotalAllowanceCharge allowanceOrChargeType="CHARGE">
+				<detallista:specialServicesType>ADS</detallista:specialServicesType>
+				<detallista:Amount>35</detallista:Amount>
+			</detallista:TotalAllowanceCharge>
+			<detallista:TotalAllowanceCharge allowanceOrChargeType="ALLOWANCE">
+				<detallista:specialServicesType>ADO</detallista:specialServicesType>
+				<detallista:Amount>50335</detallista:Amount>
+			</detallista:TotalAllowanceCharge>
+		</detallista:detallista>
+	</cfdi:Complemento>
+</cfdi:Comprobante>

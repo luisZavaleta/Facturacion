@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="0" name="FacturaControllerTests" package="facturacionelectronica" tests="1" time="4.176" timestamp="2014-03-11T07:13:05">
+      <properties />
+
+      <testcase classname="facturacionelectronica.FacturaControllerTests" name="testSomething" time="3.254">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at facturacionelectronica.FacturaControllerTests.testSomething(FacturaControllerTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="1" name="CfdiXmlServiceTests" package="mx.vulcanosw.facturacion" tests="1" time="0.201" timestamp="2014-03-11T07:13:13">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.CfdiXmlServiceTests" name="testSomething" time="0.028">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.CfdiXmlServiceTests.testSomething(CfdiXmlServiceTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="2" name="FacturaServiceTests" package="mx.vulcanosw.facturacion" tests="1" time="0.21" timestamp="2014-03-11T07:13:13">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.FacturaServiceTests" name="testSomething" time="0.016">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.FacturaServiceTests.testSomething(FacturaServiceTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="3" name="FacturaUtilServiceTests" package="mx.vulcanosw.facturacion" tests="1" time="0.018" timestamp="2014-03-11T07:13:13">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.FacturaUtilServiceTests" name="testSomething" time="0.016">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.FacturaUtilServiceTests.testSomething(FacturaUtilServiceTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="raikiri.lan" id="4" name="CabsaConfigTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="1.139" timestamp="2014-03-11T07:13:09">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.CabsaConfigTests" name="testRfc" time="0.897" />
+
+      <system-out><![CDATA[--Output from testRfc--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testRfc--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="5" name="ComprobanteTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.331" timestamp="2014-03-11T07:13:10">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.ComprobanteTests" name="testSomething" time="0.188">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.ComprobanteTests.testSomething(ComprobanteTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="6" name="ConceptoTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.481" timestamp="2014-03-11T07:13:11">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.ConceptoTests" name="testSomething" time="0.108">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.ConceptoTests.testSomething(ConceptoTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="7" name="DomicilioTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.277" timestamp="2014-03-11T07:13:11">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.DomicilioTests" name="testSomething" time="0.109">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.DomicilioTests.testSomething(DomicilioTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="8" name="EmisorTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.238" timestamp="2014-03-11T07:13:11">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.EmisorTests" name="testSomething" time="0.067">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.EmisorTests.testSomething(EmisorTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="9" name="IvaTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.36" timestamp="2014-03-11T07:13:12">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.IvaTests" name="testSomething" time="0.134">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.IvaTests.testSomething(IvaTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="10" name="ReceptorTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.46" timestamp="2014-03-11T07:13:12">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.ReceptorTests" name="testSomething" time="0.117">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.ReceptorTests.testSomething(ReceptorTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="raikiri.lan" id="11" name="RegimenFiscalTests" package="mx.vulcanosw.facturacion.cabsa" tests="1" time="0.5" timestamp="2014-03-11T07:13:13">
+      <properties />
+
+      <testcase classname="mx.vulcanosw.facturacion.cabsa.RegimenFiscalTests" name="testSomething" time="0.131">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at mx.vulcanosw.facturacion.cabsa.RegimenFiscalTests.testSomething(RegimenFiscalTests.groovy:17)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

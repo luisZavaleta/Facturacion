@@ -1,0 +1,87 @@
+.facturacion .botones {
+	margin-top: 1in;
+}
+
+.facturacion .botones .boton a span {
+	margin-top: .1in;
+}
+
+.facturacion .botones .glyphicon {
+	float: left;
+	margin-left: 15px;
+}
+
+.facturacion .botones .texto {
+	float: left;
+	margin-left: 30px;
+}
+
+.facturacion .btn-factura {
+	margin-bottom: .3in;
+	height: 50px;
+	color: #000000;
+}
+
+.btn-uno {
+	background-color: #ffb21c;
+	border-color: #ffb21c;
+}
+
+.btn-uno:hover,.btn-uno:focus,.btn-uno:active,.btn-uno.active {
+	background-color: #ffa902;
+	border-color: #e89900;
+}
+
+.btn-uno.disabled:hover,.btn-uno.disabled:focus,.btn-uno.disabled:active,.btn-uno.disabled.active,.btn-uno[disabled]:hover,.btn-uno[disabled]:focus,.btn-uno[disabled]:active,.btn-uno[disabled].active,fieldset[disabled] .btn-uno,fieldset[disabled] .btn-uno:focus,fieldset[disabled] .btn-uno:active,fieldset[disabled] .btn-uno.active
+	{
+	background-color: #ffb21c;
+	border-color: #ffb21c;
+}
+
+.btn-dos {
+	background-color: #25b04c;
+	border-color: #25b04c;
+}
+
+.btn-dos:hover,.btn-dos:focus,.btn-dos:active,.btn-dos.active {
+	background-color: #219b43;
+	border-color: #1c863a;
+}
+
+.btn-dos.disabled:hover,.btn-dos.disabled:focus,.btn-dos.disabled:active,.btn-dos.disabled.active,.btn-dos[disabled]:hover,.btn-dos[disabled]:focus,.btn-dos[disabled]:active,.btn-dos[disabled].active,fieldset[disabled] .btn-dos,fieldset[disabled] .btn-dos:focus,fieldset[disabled] .btn-dos:active,fieldset[disabled] .btn-dos.active
+	{
+	background-color: #25b04c;
+	border-color: #25b04c;
+}
+
+.btn-tre {
+	background-color: #2565b0;
+	border-color: #2565b0;
+}
+
+.btn-tre:hover,.btn-tre:focus,.btn-tre:active,.btn-tre.active {
+	background-color: #21599b;
+	border-color: #1c4d86;
+}
+
+.btn-tre.disabled:hover,.btn-tre.disabled:focus,.btn-tre.disabled:active,.btn-tre.disabled.active,.btn-tre[disabled]:hover,.btn-tre[disabled]:focus,.btn-tre[disabled]:active,.btn-tre[disabled].active,fieldset[disabled] .btn-tre,fieldset[disabled] .btn-tre:focus,fieldset[disabled] .btn-tre:active,fieldset[disabled] .btn-tre.active
+	{
+	background-color: #2565b0;
+	border-color: #2565b0;
+}
+
+.btn-cua {
+	background-color: #8a399e;
+	border-color: #8a399e;
+}
+
+.btn-cua:hover,.btn-cua:focus,.btn-cua:active,.btn-cua.active {
+	background-color: #7a328b;
+	border-color: #692b79;
+}
+
+.btn-cua.disabled:hover,.btn-cua.disabled:focus,.btn-cua.disabled:active,.btn-cua.disabled.active,.btn-cua[disabled]:hover,.btn-cua[disabled]:focus,.btn-cua[disabled]:active,.btn-cua[disabled].active,fieldset[disabled] .btn-cua,fieldset[disabled] .btn-cua:focus,fieldset[disabled] .btn-cua:active,fieldset[disabled] .btn-cua.active
+	{
+	background-color: #8a399e;
+	border-color: #8a399e;
+}

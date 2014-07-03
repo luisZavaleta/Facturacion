@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  sello="Hiij6AOMensE4ODsBx2qFrsnBdjW6tVujVXDCeyNAeqLDEMZTiH+IyNk3PoROpfAShpzmlS2kgMPV9yl9Q1UdZhPy2g6ywil/U8kocTPQbrnmB6ASkby4/HgrBS8v99uNfr53AodNtmfT7towbZKr3e7BgpsKoFmZayN3hEioR0="
+  certificado="MIIFEDCCA/igAwIBAgIUMjAwMDEwMDAwMDAxMDAwMDA4MzgwDQYJKoZIhvcNAQEFBQAwggFvMRgwFgYDVQQDDA9BLkMuIGRlIHBydWViYXMxLzAtBgNVBAoMJlNlcnZpY2lvIGRlIEFkbWluaXN0cmFjacOzbiBUcmlidXRhcmlhMTgwNgYDVQQLDC9BZG1pbmlzdHJhY2nDs24gZGUgU2VndXJpZGFkIGRlIGxhIEluZm9ybWFjacOzbjEpMCcGCSqGSIb3DQEJARYaYXNpc25ldEBwcnVlYmFzLnNhdC5nb2IubXgxJjAkBgNVBAkMHUF2LiBIaWRhbGdvIDc3LCBDb2wuIEd1ZXJyZXJvMQ4wDAYDVQQRDAUwNjMwMDELMAkGA1UEBhMCTVgxGTAXBgNVBAgMEERpc3RyaXRvIEZlZGVyYWwxEjAQBgNVBAcMCUNveW9hY8OhbjEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTIwMAYJKoZIhvcNAQkCDCNSZXNwb25zYWJsZTogSMOpY3RvciBPcm5lbGFzIEFyY2lnYTAeFw0xMDA3MDExNzA0MzFaFw0xMjA2MzAxNzA0MzFaMIGpMSAwHgYDVQQDExdESUVHTyBWRUxBWlFVRVogQkFSUk9TTzEgMB4GA1UEKRMXRElFR08gVkVMQVpRVUVaIEJBUlJPU08xIDAeBgNVBAoTF0RJRUdPIFZFTEFaUVVFWiBCQVJST1NPMRYwFAYDVQQtEw1WRUJENzAwNjE2UTQ0MRswGQYDVQQFExJWRUJENzAwNjE2SFBMTFJHMDgxDDAKBgNVBAsTA1NBVDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAsEXburYoCw+2e6jR38QwjRzn9800SOJffqjv7MC155CEDPVC7ebo0wwt0kZhCSNqWJWoSaKGREOhmwOI1ULy6FVaa2/F0KBhSDDrH0uaWy0ZnxCtHtLB7t1Cc0P+D6cXCixcmQDCj7thkF0GJoS4nkiPxHHlPIs4GPNHGeZtUTkCAwEAAaOB6jCB5zAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDAdBgNVHQ4EFgQURC/ld3cTnoQ9u9wQKOXS7fauhfYwLgYDVR0fBCcwJTAjoCGgH4YdaHR0cDovL3BraS5zYXQuZ29iLm14L3NhdC5jcmwwMwYIKwYBBQUHAQEEJzAlMCMGCCsGAQUFBzABhhdodHRwOi8vb2NzcC5zYXQuZ29iLm14LzAfBgNVHSMEGDAWgBTrWX0EIppTjZ5xGqBYlin1OeCgxTAQBgNVHSAECTAHMAUGAyoDBDATBgNVHSUEDDAKBggrBgEFBQcDAjANBgkqhkiG9w0BAQUFAAOCAQEAOhQzn6LxMPgBTfQHmja8rpv+SnQwR/DcJ5zmqBS6bsP1d8SpPXHTeql1fpvdwoSnvYsZT1VZh5AizkUSGrdvapsQ7/iSmvQcQO0uH1PMP8OvtN14V7I7J1ewBse+apkDbuE2e0kC0tyql6+7FJIsyEhHCAmglUm9sDnPEmM3adWi0xM0mR6DmNclVyI4sjuGOeNgdh2+gE7zgL9tRvnNX7+kmCVRcNzlVGSjkRATo3y1O9TMXPh/oPwd7HkMEXnwWq8dMxYZUo6FM8SEBuihNR+4X5Dsm7WagJnPNa93Sw0GoEzdTO/XAtQktbVVjr9tvIcORvm4rYadwOUFX7Xb4g=="
+  fecha="2011-05-12T19:47:22" version="3.2"
+  xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/psgecfd http://www.sat.gob.mx/sitio_internet/cfd/psgecfd/psgecfd.xsd"
+  xmlns:psgecfd="http://www.sat.gob.mx/psgecfd" formaDePago="Pago en una sola Exhibición"
+  noCertificado="20001000000100001740" condicionesDePago="Contado" subTotal="100.00"
+  descuento="16.00" TipoCambio="1.00" Moneda="MXN" total="97.44" metodoDePago="Efectivo"
+  tipoDeComprobante="ingreso" LugarExpedicion="No Aplica">
+  <cfdi:Emisor rfc="SUL010720JN8" nombre="VEBD700616Q44">
+    <cfdi:DomicilioFiscal calle="Allende 513 Sur &lt;&amp;re&apos;m&quot;a&quot;&gt;"
+      noExterior="513" noInterior="A" colonia="San Pedro &lt;&amp;re&apos;m&quot;a&quot;&gt;"
+      localidad="Monterrey &lt;&amp;re&apos;m&quot;a&quot;&gt;"
+      referencia="Por el Centro &lt;&amp;re&apos;m&quot;a&quot;&gt;"
+      municipio="Garza García &lt;&amp;re&apos;m&quot;a&quot;&gt;" estado="Aguascalientes"
+      pais="México" codigoPostal="66339"/>
+    <cfdi:RegimenFiscal Regimen="No Aplica"/>
+  </cfdi:Emisor>
+  <cfdi:Receptor rfc="REMA780518AH3" nombre="Cliente Nuevo">
+    <cfdi:Domicilio calle="Allende" estado="Nuevo León" pais="México"/>
+  </cfdi:Receptor>
+  <cfdi:Conceptos>
+    <cfdi:Concepto cantidad="1" descripcion="Producto de venta" valorUnitario="100" importe="100" unidad="No Aplica"/>
+  </cfdi:Conceptos>
+  <cfdi:Impuestos totalImpuestosTrasladados="13.44">
+    <cfdi:Traslados>
+      <cfdi:Traslado impuesto="IVA" tasa="16.00" importe="13.44"/>
+    </cfdi:Traslados>
+  </cfdi:Impuestos>
+  <cfdi:Complemento>
+    <psgecfd:PrestadoresDeServiciosDeCFD
+      nombre="DESARROLLO CORPORATIVO DE NEGOCIOS EN TECNOLOGIA DE LA INFORMACION SA DE CV"
+      rfc="DCD090706E42" noCertificado="00001000000102037240"
+      fechaAutorizacion="2010-10-27T18:00:00" noAutorizacion="69361"
+      selloDelPSGECFD="MNxRzhoQaXR2flG3rIujxRvqBnSSQVdH+w09QGUkMV6Txs2QUew7OnpFYjB9KUE7ivfvrnb7jW3EzSsguqMGDhvK4TtDJKGuCoXy269af8L1TEn8GJi4jebG57ed+0k97qc2YP9zJi5XYpq7mxE1ybO6GUMqEs+ZQ9GG5WmogtQ="
+    />
+  </cfdi:Complemento>
+</cfdi:Comprobante>

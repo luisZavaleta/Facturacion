@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:egas="http://www.egas.com.mx/cfdId/3"
+	xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd  http://www.egas.com.mx/cfdId/3 http://www.egas.com.mx/cfdId/3/cfdId.xsd"
+	version="3.2" serie="CFDII" folio="90268" fecha="2014-01-15T11:12:38"
+	sello="KTghTNcSN9B07tF3LFfkl3yduy79ZU+oDfF3pSVKo9qaX4/4U5uGTUsA/kRUq13SBcMINWW92BjX91B92rGx/FcITPDcXf/u4Q2YVNpP14hClbGqkUdwc2f2423mcBnhQuU5UG7GB6cbm6O5sMGZTkhDV6jZCQ3ZYGfn9IdlFT4="
+	formaDePago="Pago en una sola exhibición" noCertificado="00001000000300437460"
+	certificado="MIIEhzCCA2+gAwIBAgIUMDAwMDEwMDAwMDAzMDA0Mzc0NjAwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xMzA3MDQxODU5MzNaFw0xNzA3MDQxODU5MzNaMIHTMSgwJgYDVQQDEx9TRVJWSUNJTyBQTEFZQSBERUwgTUFSIFNBIERFIENWMSgwJgYDVQQpEx9TRVJWSUNJTyBQTEFZQSBERUwgTUFSIFNBIERFIENWMSgwJgYDVQQKEx9TRVJWSUNJTyBQTEFZQSBERUwgTUFSIFNBIERFIENWMSUwIwYDVQQtExxTUE0wODExMTRINTIgLyBBRVJGNzgxMDA0RFA0MR4wHAYDVQQFExUgLyBBRVJGNzgxMDA0SFZaTFNSMDgxDDAKBgNVBAsTA1NBVDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAqYexqzPl/KW3u0kVsLlmSOIb6LXXp0wItRQVFfE5F6XgRAufBBKUZG1Un/dfIIu5jrzxkGulKDTE6nkE9lMOX6JC9PZO1SIb9Of5S/PfcFss0ykqvlMRxK1Cnl/oAni2J3iWdT26/vjbZ27uWcKk+1h0JI2nbqnwHUL0WvPE9+sCAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBABV8AJaJ1/m9o2GeiPVPTF+nLVSTceJt33gc/S8Wcla0KHie4UzT347U3gCrWRbPYOX8p9J9cbVw65gQMVo9cjS4Zzu4SEsgdyrhpyt7d6cuFU2715P7dkjgBMUiM96K9eY2MDogj/E44bxOsZrwEOsVVPAqP2ZN/N3sQly4sq4YWLJn5xb/yAWUL5Nb533nwM6yJ0YG8+EEyPZWaLEml3vAFiWLPznBYpbyQnOEGRIuFUTemfwVW2DUh70vZ/2nailfyUpBNDDVp/f+NO7Fsp2qte01i1fU6idculePbepIop0dd2itKHxNpEtpskxaPueMaq/qXX60wASa+OPvBfs="
+	subTotal="106.70" total="123.20" tipoDeComprobante="ingreso"
+	metodoDePago="Tarjeta" LugarExpedicion="COATZACOALCOS, VERACRUZ, MEXICO"
+	NumCtaPago="4019">
+	<cfdi:Emisor rfc="SPM081114H52" nombre="SERVICIO PLAYA DEL MAR SA DE CV">
+		<cfdi:DomicilioFiscal calle="VICENTE RIVA PALACIO"
+			noExterior="1110" colonia="GUADALUPE VICTORIA" localidad="COATZACOALCOS"
+			referencia="-" municipio="-" estado="VERACRUZ" pais="MEXICO"
+			codigoPostal="96520" />
+		<cfdi:RegimenFiscal Regimen="Persona Moral. Régimen general" />
+	</cfdi:Emisor>
+	<cfdi:Receptor rfc="VSO120910LV5" nombre="VULCANO SOFTWARE SA DE CV">
+		<cfdi:Domicilio calle="18 DE MARZO" noExterior="2200"
+			noInterior="EDIF F 102" colonia="PUERTO MEXICO" localidad="-"
+			municipio="COATZACOALCOS" estado="VERACRUZ" pais="MEXICO"
+			codigoPostal="96510" />
+	</cfdi:Receptor>
+	<cfdi:Conceptos>
+		<cfdi:Concepto cantidad="10.000" unidad="Litros"
+			noIdentificacion="32011" descripcion="MAGNA" valorUnitario="10.670345"
+			importe="106.70">
+		</cfdi:Concepto>
+	</cfdi:Conceptos>
+	<cfdi:Impuestos>
+		<cfdi:Traslados>
+			<cfdi:Traslado impuesto="IVA" tasa="16.00" importe="16.50" />
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+	<cfdi:Complemento>
+		<tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+			xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/TimbreFiscalDigital/TimbreFiscalDigital.xsd"
+			version="1.0" UUID="2CB0168E-5180-489E-AC8F-E49C595C9E61"
+			FechaTimbrado="2014-01-15T11:13:34"
+			selloCFD="KTghTNcSN9B07tF3LFfkl3yduy79ZU+oDfF3pSVKo9qaX4/4U5uGTUsA/kRUq13SBcMINWW92BjX91B92rGx/FcITPDcXf/u4Q2YVNpP14hClbGqkUdwc2f2423mcBnhQuU5UG7GB6cbm6O5sMGZTkhDV6jZCQ3ZYGfn9IdlFT4="
+			noCertificadoSAT="00001000000202639096"
+			selloSAT="dF2qoLuM6Mx7bztI9Mm0h/7qSxI5Sm0SOybrYnaOC4wxP6pdiP7/y1TJUK08DPobGK+GBKDUIkW8M9zPqH5hLyBCgmt6/5xZ0k6O7EwhaKW900UcIcM7qfLz1eLs5IbBA8f3h6x0iVjk6XGkAwqWMhGFfbEut8nVS3ZHL1xM5p4=" />
+	</cfdi:Complemento>
+	<cfdi:Addenda>		<egas:idVentas>			<egas:idVenta Id="1419689" />		</egas:idVentas>	</cfdi:Addenda>
+
+</cfdi:Comprobante>
