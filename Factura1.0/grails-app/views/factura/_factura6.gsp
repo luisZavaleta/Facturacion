@@ -4,7 +4,6 @@
 <title>-</title>
 <g:render template="/factura/css3" />
 <g:render template="/factura/css2" />
-
 </head>
 <body>
 	<div class="factura-container">
@@ -80,6 +79,18 @@
 					<table class="table">
 						<tbody>
 							<tr>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+								<td colspan="3" class=" active">a:</td>
+									<td colspan="3" class=" active">a:</td>
+								<td colspan="1" class=" active fecha">a:</td>
+								
+							</tr>
+							<tr>
 								<td colspan="3" class=" active">Cliente:</td>
 								<td colspan="13" class=" "></td>
 								<td colspan="2" class=" active">RFC:</td>
@@ -104,54 +115,11 @@
 							</tr>
 							<tr>
 								<td colspan="3" class=" active">Ciudad:</td>
-								<td colspan="9" class=" "></td>
+								<td colspan="11" class=" "></td>
 								<td colspan="2" class=" active">Estado:</td>
-								<td colspan="4" class=" c1-text "></td>
-								<td colspan="2" class=" active">País:</td>
-								<td colspan="4" class=" c1-text b-right"></td>
+								<td colspan="8" class=" c1-text b-right"></td>
 								<td colspan="1" class="fecha "></td>
 							</tr>
-							<%-- 
-							<tr>
-								<td class="c1 active ">Nombre:</td>
-								<td colspan="3" class="c1-text b-right">
-									<span style="visibility: hidden">A</span>
-								</td>
-								<td>
-									<span style="visibility: hidden">A</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="c1 active ">Dirección:</td>
-								<td colspan="3" class="c1-text b-right">
-									<span style="visibility: hidden">A</span>
-								</td>
-								<td class="active">Condición de pago</td>
-							</tr>
-							<tr>
-								<td class="c1 active">Colonia:</td>
-								<td class="c2 c1-text">
-									<span style="visibility: hidden">A</span>
-								</td>
-								<td class="c3 active">C.P.:</td>
-								<td class="c4 c1-text b-right">
-									<span style="visibility: hidden">A</span>
-								</td>
-								<td rowspan="2">
-									<span style="visibility: hidden">A</span>
-								</td>
-							</tr>
-							<tr class="cliente-ubicacion">
-								<td class="c1 active">Ciudad:</td>
-								<td class="c2 c1-text">
-									<span style="visibility: hidden">A</span>
-								</td>
-								<td class="c3 active">Estado:</td>
-								<td class="c4 c1-text b-right">
-									<span style="visibility: hidden">A</span>
-								</td>
-							</tr>
-							--%>
 						</tbody>
 					</table>
 				</div>

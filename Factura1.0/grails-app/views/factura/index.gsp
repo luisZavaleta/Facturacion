@@ -38,13 +38,16 @@
 </head>
 <body class="facturacion">
 	<img src="${resource(dir: 'images', file: 'ajax-loader.gif')}"
-		id="loading-indicator" style="display: none; width:45px; height:45px; z-index:999999" />
+		id="loading-indicator"
+		style="display: none; width: 45px; height: 45px; z-index: 999999" />
 	<div class="row">
 		<div class="alert alert-success" style="display: none"></div>
 	</div>
 	<div class="row">
 		<div class="col-md-9">
-			<g:render template="factura7" />
+			<div style="margin-top: 25px;margin-bottom: 25px">
+				<g:render template="factura7" />
+			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="row">

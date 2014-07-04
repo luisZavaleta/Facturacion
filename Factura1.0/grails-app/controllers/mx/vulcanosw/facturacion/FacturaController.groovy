@@ -758,6 +758,15 @@ class FacturaController {
 
 	}
 
+
+
+	def testpdf(){
+
+
+		pdfRenderingService.render([template:"factura7",controller:this,model:null],response)
+
+	}
+
 	def notapdf(){
 
 
