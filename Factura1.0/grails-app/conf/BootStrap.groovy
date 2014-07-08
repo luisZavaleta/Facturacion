@@ -12,7 +12,7 @@ class BootStrap {
 
 		if(adminRol == null){
 
-			 adminRol = Rol.findByAuthority('ROLE_ADMIN') ?: new Rol(authority: 'ROLE_ADMIN').save(failOnError: true)
+			adminRol = Rol.findByAuthority('ROLE_ADMIN') ?: new Rol(authority: 'ROLE_ADMIN').save(failOnError: true)
 
 			def adminUser = Usuario.findByUsername('admin') ?: new Usuario(
 				username: 'admin',
@@ -25,7 +25,7 @@ class BootStrap {
 
 		}
 
-//UUID
+		//UUID
 		CabsaConfig cc = CabsaConfig.findByNombre("main")
 
 		if(cc == null){

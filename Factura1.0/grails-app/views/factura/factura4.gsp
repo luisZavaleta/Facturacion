@@ -184,33 +184,32 @@ tr.cliente-ubicacion td div.active {
 
 tr.cliente-ubicacion td div {
 	float: left;
-	display:block;
+	display: block;
 }
 
 tr.cliente-ubicacion td div.titulo-ciudad {
-	width:14.5%;
+	width: 14.5%;
 }
 
 tr.cliente-ubicacion td div.ciudad {
-	width:19%;
+	width: 19%;
 }
 
 tr.cliente-ubicacion td div.titulo-estado {
-	width:14.5%;
+	width: 14.5%;
 }
 
 tr.cliente-ubicacion td div.estado {
-	width:19%;;
+	width: 19%;;
 }
 
 tr.cliente-ubicacion td div.titulo-pais {
-	width:14.5%;
+	width: 14.5%;
 }
 
 tr.cliente-ubicacion td div.pais {
-	width:18.5%;
+	width: 18.5%;
 }
-
 </style>
 </head>
 <body>
@@ -399,17 +398,11 @@ tr.cliente-ubicacion td div.pais {
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>
-									<span style="visibility: hidden">A</span>
-								</td>
+								<td>Debemos y pagaremos</td>
 							</tr>
 							<tr>
-								<td style="width: 100%">
-									<span style="visibility: hidden">Si esta factura no se
-										paga a su vencimiento generará intereses moratorios del 8%
-										Mensual. Toda devolución causará un 20% de cargo por manejo de
-										material.</span>
-								</td>
+								<td style="width: 100%">Si esta factura no se paga a su
+									vencimiento generará intereses moratorios del 8% Mensual.</td>
 							</tr>
 						</tbody>
 					</table>
@@ -428,9 +421,9 @@ tr.cliente-ubicacion td div.pais {
 							<tr>
 								<td class="b-left break-word">
 									<p>
-										<span style="visibility: hidden">||1.0|5CF3BE94-351C-D25B-38A9-3BDCFD3E3FE3|2013-12-
-											24T21:12:01|W6KQr8DsxDsn07WcFrEw8ymDTOpdQ8nt0Y1egq80D8588QbZEO2ZpfwTomOtgqbvGbeULI2SMsCXhsx9kLHGw+pnmEWwbEoi546uTM7SW0tYkWCfR5ruggNya/b3I0u+5/ivdBJueZphE1uXbEXl9
-											1I2n40qMdiwwAChP3wRDUw=|00001000000202771790||</span>
+										<span style="visibility: hidden">AA||&shy;1.0|&shy;5CF3BE94-&shy;351C-&shy;D25B-&shy;38A9-&shy;3BDCFD3E3FE3&shy;|2013-12-
+											24T21:12:01|&shy;W6KQ&shy;r8&shy;DsxDsn&shy;07WcF&shy;rEw8&shy;ymD&shy;TOpdQ&shy;8nt0&shy;Y1egq8&shy;0D85&shy;88Q&shy;bZEO&shy;2Zpfw&shy;TomO&shy;tgqb&shy;vGbe&shy;ULI&shy;2SMsC&shy;Xhsx9k&shy;LHGw+&shy;pnmE&shy;Wwb&shy;Eo&shy;i546&shy;uTM7&shy;SW0tY&shy;kWCf&shy;R5rug&shy;gNy&shy;a/b3&shy;I0u&shy;+5/i&shy;vdBJu&shy;eZp&shy;hE1&shy;uXb&shy;EXl9
+											1I2&shy;n4&shy;0qMdi&shy;wwACh&shy;P3w&shy;RD&shy;Uw=|00&shy;00&shy;10&shy;000&shy;00202&shy;7717&shy;90||</span>
 									</p>
 								</td>
 							</tr>
