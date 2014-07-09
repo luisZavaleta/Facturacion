@@ -8,6 +8,11 @@
 	size: 8.5in 11in;
 }
 
+table tr td {
+	padding: 0px;
+	text-align: center;
+}
+
 .factura-container {
 	width: 7.02in !important;
 	height: 9.7in !important;
@@ -82,7 +87,6 @@ table.bordered td {
 
 .logo-company {
 	width: 2.62in;
-	background-color: yellow;
 	float: left;
 	height: 100px;
 }
@@ -131,6 +135,14 @@ table.table-productos tr.td-producto td,table.table-productos tr.title td
 
 table.table-productos tr.title {
 	border-right: 1px solid #ddd;
+}
+
+table.table-productos tr  td {
+	text-align: left;
+}
+
+table.table-productos tr.title  td {
+	text-align: center;
 }
 
 table.table-productos tr.title  td.parte {
@@ -197,6 +209,17 @@ table.table-datos-empresa {
 	float: right;
 	width: 78%;
 }
+
+.left-title {
+	text-align: right;
+	padding-right: 5px;
+}
+
+.center-title {
+	text-align: center;
+}
+
+
 </style>
 </head>
 <body>
@@ -230,7 +253,7 @@ table.table-datos-empresa {
 					</tr>
 				</tbody>
 			</table>
-			<div class="logo-company"></div>
+			<div class="logo-company">LOGO DE LA COMPAÑIA</div>
 			<table class="table-0 bordered">
 				<tbody>
 					<tr>
@@ -262,42 +285,42 @@ table.table-datos-empresa {
 			<table class="table-datos-cliente bordered">
 				<tbody>
 					<tr>
-						<td class=" colored titulo">Cliente:</td>
+						<td class="colored titulo left-title">Cliente:</td>
 						<td class="titulo-texto"></td>
 						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored">RFC:</td>
+						<td colspan="2" class=" colored left-title">RFC:</td>
 						<td colspan="6" class=" c1-text b-right"></td>
 						<td colspan="1" class="fecha colored  border-gray-left">Fecha
 							expedición</td>
 					</tr>
 					<tr>
-						<td class=" colored">Calle:</td>
+						<td class="colored left-title">Calle:</td>
 						<td class=" "></td>
 						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored">Int.:</td>
+						<td colspan="2" class=" colored left-title">Int.:</td>
 						<td colspan="2" class=" c1-text"></td>
-						<td colspan="2" class=" colored">Ext:</td>
+						<td colspan="2" class=" colored left-title">Ext:</td>
 						<td colspan="2" class=" c1-text b-right"></td>
 						<td colspan="1" class="border-gray-left"></td>
 					</tr>
 					<tr>
-						<td class=" colored">Colonia:</td>
+						<td class=" colored left-title">Colonia:</td>
 						<td class=" "></td>
 						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored">C.P.:</td>
+						<td colspan="2" class=" colored left-title">C.P.:</td>
 						<td colspan="6" class=" c1-text b-right"></td>
 						<td colspan="1" class="fecha colored border-gray-left">Condición
 							de pago</td>
 					</tr>
 					<tr>
-						<td class=" colored">Ciudad:</td>
+						<td class=" colored left-title">Ciudad:</td>
 						<td colspan="11"></td>
 						<td class="fecha border-gray-left" rowspan="2"></td>
 					</tr>
 					<tr>
-						<td class=" colored titulo">Estado:</td>
+						<td class=" colored titulo left-title">Estado:</td>
 						<td class="titulo-texto"></td>
-						<td colspan="2" class=" colored">Pais:</td>
+						<td colspan="2" class=" colored left-title">Pais:</td>
 						<td colspan="8" class=" c1-text b-right"></td>
 					</tr>
 				</tbody>
@@ -423,17 +446,17 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td colspan="4" class="colored b-top">Importe con letras</td>
-						<td colspan="2" class="colored b-top">Subtotal</td>
+						<td colspan="2" class="colored b-top left-title">Subtotal:</td>
 						<td class="b-top">Un trillon</td>
 					</tr>
 					<tr>
 						<td colspan="4" rowspan="2" class="b-top">Dos trillones de
 							dolares</td>
-						<td colspan="2" class="colored b-top">I.V.A.</td>
+						<td colspan="2" class="colored b-top left-title">I.V.A:</td>
 						<td class="b-top">Tres trillones</td>
 					</tr>
 					<tr>
-						<td colspan="2" class="colored b-top">Total.</td>
+						<td colspan="2" class="colored b-top left-title">Total:</td>
 						<td class="b-top">
 							<span style="visibility: hidden">A</span>
 						</td>
@@ -455,12 +478,13 @@ table.table-datos-empresa {
 				<table class="table-datos-sat bordered">
 					<tbody>
 						<tr>
-							<td rowspan="7" class="bcode border-gray-right">
+							<td rowspan="7" class="bcode border-right">
 								<div>barcode</div>
 							</td>
 						</tr>
 						<tr>
-							<td class="sellos active b-left">SELLO DÍGITAL DEL EMISOR</td>
+							<td class="colored active b-left center-title">SELLO DÍGITAL
+								DEL EMISOR</td>
 						</tr>
 						<tr>
 							<td class="b-left break-word ">
@@ -472,7 +496,8 @@ table.table-datos-empresa {
 							</td>
 						</tr>
 						<tr>
-							<td class="active b-left">SELLO DIGITAL DEL SAT</td>
+							<td class="colored b-left center-title">SELLO DIGITAL DEL
+								SAT</td>
 						</tr>
 						<tr>
 							<td class="b-left break-word">
@@ -483,8 +508,8 @@ table.table-datos-empresa {
 							</td>
 						</tr>
 						<tr>
-							<td class="active b-left">CADENA ORIGINAL DE COMPLEMENTO DE
-								CERTIFICADO DIGITAL DEL SAT</td>
+							<td class="colored b-left center-title">CADENA ORIGINAL DE
+								COMPLEMENTO DE CERTIFICADO DIGITAL DEL SAT</td>
 						</tr>
 						<tr>
 							<td class="b-left break-word">

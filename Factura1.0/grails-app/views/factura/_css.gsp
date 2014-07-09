@@ -196,11 +196,7 @@ table tr.active  td,table tr td.active {
 	width: 80%;
 }
 
-.break-word {
-	word-break: break-all;
-	word-wrap: break-word;
-	font-size: 10px;
-}
+
 
 .table>thead>tr>.active,.table>tbody>tr>.active,.table>tfoot>tr>.active,.table>thead>.active>td,.table>tbody>.active>td,.table>tfoot>.active>td,.table>thead>.active>th,.table>tbody>.active>th,.table>tfoot>.active>th
 	{

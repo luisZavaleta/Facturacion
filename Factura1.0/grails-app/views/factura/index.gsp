@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+<r:require modules="jqueryui" />
+<r:require modules="bootstrap" />
+<r:require modules="factura" />
+<r:require modules="index" />
+<r:require modules="indexcss" />
+
+<meta name="layout" content="main" />
 <title>-</title>
+<%--
 <link rel="stylesheet"
 	href="${resource(dir: 'css', file: 'jquery-ui.min.css')}"
 	type="text/css">
+	
 <link rel="stylesheet"
 	href="${resource(dir: 'css', file: 'bootstrap.min.css')}"
 	type="text/css">
@@ -22,18 +31,25 @@
 <link rel="stylesheet"
 	href="${resource(dir: 'css', file: 'factura-index.css')}"
 	type="text/css">
+	--%>
 <g:javascript src="listas.js" />
+<%--
 <g:render template="/factura/css" />
-<g:javascript src="jquery-2.0.3.min.js" />
-<g:javascript src="jquery-ui.min.js" />
+
+<g:javascript src="jquery-2.0.3.min.js.old" />
+<g:javascript src="jquery-ui.min.js.old" />
+
 <g:javascript src="vulcano-util.js" />
 <g:javascript src="factura2.js" />
 <g:javascript src="generar-factura.js" />
 <g:javascript src="botones-laterales.js" />
-<g:javascript src="bootstrap.min.js" />
+
+<g:javascript src="bootstrap.min.js.old" />
+
 <g:javascript src="bootstrap-modalmanager.js" />
 <g:javascript src="bootstrap-modal.js" />
 <g:javascript src="jasny-bootstrap.min.js" />
+--%>
 <g:javascript src="big.min.js" />
 </head>
 <body class="facturacion">
@@ -45,7 +61,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-9">
-			<div style="margin-top: 25px;margin-bottom: 25px">
+			<div style="margin-top: 25px; margin-bottom: 25px">
 				<g:render template="factura7" />
 			</div>
 		</div>
@@ -81,7 +97,7 @@
 							<span class="texto">CONFIGURACIÓN</span>
 						</a>
 					</div>
-					 --%>
+					--%>
 					<div class="col-md-12 boton">
 						<a href="#"
 							class="btn btn-block btn-factura btn-info editar-facturas">

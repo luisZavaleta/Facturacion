@@ -119,7 +119,56 @@ grails {
 }
 
 
+grails.resources.modules = {
+	jquery{
+		resource url:"js/jquery-2.0.3.min.js"
+		resource url:"js/jquery-migrate-1.2.1.min.js"
+	}
 
+
+	jqueryui{
+		dependsOn "jquery"
+
+		resource url:"js/jquery-ui.min.js"
+		resource url:"css/jquery-ui.min.css"
+	}
+
+
+	bootstrap{
+		dependsOn "jquery"
+		resource url:"js/bootstrap.min.js"
+	}
+
+
+	indexcss{
+		resource url:"css/bootstrap.min.css"
+		resource url:"css/bootstrap-modal-bs3patch.css"
+		resource url:"css/bootstrap-modal.css"
+		resource url:"css/jasny-bootstrap.min.css"
+		resource url:"css/btn-factura.css"
+		resource url:"css/factura-index.css"
+
+	}
+
+	util{
+		dependsOn "jquery"
+		resource url:"js/vulcano-util.js"
+	}
+
+	factura{
+		dependsOn "util"
+		resource url:"js/factura2.js"
+		resource url:"js/generar-factura.js"
+
+	}
+
+
+	index{
+		dependsOn "util"
+		resource url:"js/botones-laterales.js"
+		resource url:"js/factura2.js"
+	}
+}
 
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
@@ -159,6 +208,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':              	['permitAll'],
 	'/**/img/**':                  	['permitAll'],
 	'/**/favicon.ico':             	['permitAll'],
-	'/**':         			['ROLE_ADMIN', 'IS_AUTHENTICATED_FULLY']
+	'/**':         			[
+		'ROLE_ADMIN',
+		'IS_AUTHENTICATED_FULLY']
 ]
+
 
