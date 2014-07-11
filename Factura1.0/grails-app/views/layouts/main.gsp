@@ -15,7 +15,7 @@
 <g:layoutHead />
 <r:layoutResources />
 </head>
-<body>
+<body class="facturacion">
 	<g:layoutBody />
 	<r:layoutResources />
 </body>

@@ -361,7 +361,6 @@ table tr.active  td,table tr td.active {
 	left: 422px;
 	top: 159px;
 	width: 177px;
-
 }
 
 .fechaExpedicion {
@@ -372,9 +371,7 @@ table tr.active  td,table tr td.active {
 .condicionPago {
 	left: 605px;
 	top: 159px;
-	
 	width: 107px;
-
 }
 
 .importeLetra {
@@ -524,12 +521,13 @@ table tr.active  td,table tr td.active {
 		</div>
 		<div class="cliente">
 			${ data.cliente}
+			<!-- NOT used anymore -->
 		</div>
 		<div class="rfcReceptor">
 			${ data.rfcReceptor}
 		</div>
 		<div class="nombre">
-			${ data.nombre}
+			${data.nombre}
 		</div>
 		<div class="direccion">
 			${ data.direccion}
@@ -660,4 +658,3 @@ table tr.active  td,table tr td.active {
 	</div>
 </body>
 </html>
-

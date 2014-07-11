@@ -23,6 +23,7 @@ table tr td {
 	box-sizing: content-box !important;
 	font-size: 11px;
 	position: relative;
+	line-height: 1.3;
 }
 
 .factura-inner-container {
@@ -58,7 +59,7 @@ table.bordered {
 }
 
 table.bordered td {
-	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 .border-gray-right {
@@ -67,6 +68,18 @@ table.bordered td {
 
 .border-gray-left {
 	border-left: 1px solid #ddd;
+}
+
+.border-gray-top td {
+	border-top: 1px solid #ddd;
+}
+
+.border-color-right {
+	border-right: 2px solid #0084cf !important;
+}
+
+.border-color-left {
+	border-left: 2px solid #0084cf !important;
 }
 
 .table-0 {
@@ -83,6 +96,12 @@ table.bordered td {
 .table-0 tr td {
 	border: 1px;
 	padding: 1px;
+	height: 16px;
+}
+
+.table-productos tr td,.table-opcional  tr td,.table-forma-pago tr td,.table-datos-empresa tr td
+	{
+	height: 16px;
 }
 
 .logo-company {
@@ -211,6 +230,11 @@ table.table-datos-empresa {
 }
 
 .left-title {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.right-title {
 	text-align: right;
 	padding-right: 5px;
 }
@@ -219,7 +243,9 @@ table.table-datos-empresa {
 	text-align: center;
 }
 
-
+.sello-digital-emisor,.sello-digital-sat,.cadena-original {
+	height: 50px;
+}
 </style>
 </head>
 <body>
@@ -232,7 +258,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							${data?.folioFiscal ?: 'Dato proveído por el SAT'}
 						</td>
 					</tr>
 					<tr class="">
@@ -240,7 +266,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							${ data?.noCertificadoSAT ?: 'Dato proveído por el SAT'}
 						</td>
 					</tr>
 					<tr class="">
@@ -248,7 +274,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							${data?.noSerieCertifiado ?: 'Dato proveído por el SAT'}
 						</td>
 					</tr>
 				</tbody>
@@ -261,7 +287,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							${ data?.idFactura ?: 'Dato proveído por el sistema' }
 						</td>
 					</tr>
 					<tr class="">
@@ -269,7 +295,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							${ data?.fechaCertificacion ?: 'Dato proveído por el SAT'}
 						</td>
 					</tr>
 					<tr class="">
@@ -277,7 +303,9 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span style="visibility: hidden">A</span>
+							<span class="regimen-fiscal-text">
+								${data?.regimenFiscal ?: "---" }
+							</span>
 						</td>
 					</tr>
 				</tbody>
@@ -285,48 +313,62 @@ table.table-datos-empresa {
 			<table class="table-datos-cliente bordered">
 				<tbody>
 					<tr>
-						<td class="colored titulo left-title">Cliente:</td>
-						<td class="titulo-texto"></td>
-						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored left-title">RFC:</td>
-						<td colspan="6" class=" c1-text b-right"></td>
-						<td colspan="1" class="fecha colored  border-gray-left">Fecha
+						<td class="colored titulo right-title">Cliente:</td>
+						<td class="titulo-texto left-title">
+							${data?.nombre ?: 'Nombre'}
+						</td>
+						<td colspan="2" class=" colored right-title">RFC:</td>
+						<td colspan="6" class=" left-title">
+							${ data?.rfcReceptor ?: 'RFC del Cliente'}
+						</td>
+						<td colspan="1" class="fecha colored  border-color-left">Fecha
 							expedición</td>
 					</tr>
 					<tr>
-						<td class="colored left-title">Calle:</td>
-						<td class=" "></td>
-						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored left-title">Int.:</td>
-						<td colspan="2" class=" c1-text"></td>
-						<td colspan="2" class=" colored left-title">Ext:</td>
-						<td colspan="2" class=" c1-text b-right"></td>
-						<td colspan="1" class="border-gray-left"></td>
+						<td class="colored right-title">Calle:</td>
+						<td class="left-title">
+							${ data?.calle ?: 'Calle'}
+						</td>
+						<td colspan="2" class=" colored right-title">Int.:</td>
+						<td colspan="2" class=" left-title">
+							${ data?.interior ?: 'Int.'}
+						</td>
+						<td colspan="2" class=" colored right-title">Ext:</td>
+						<td colspan="2" class="left-title">
+							${ data?.exterior ?: 'Ext.'}
+						</td>
+						<td colspan="1" class="border-color-left left-title">
+							${ data?.fechaExpedicion ?: 'Fecha de expedición'}
+						</td>
 					</tr>
 					<tr>
-						<td class=" colored left-title">Colonia:</td>
-						<td class=" "></td>
-						<td colspan="2" class=" "></td>
-						<td colspan="2" class=" colored left-title">C.P.:</td>
-						<td colspan="6" class=" c1-text b-right"></td>
-						<td colspan="1" class="fecha colored border-gray-left">Condición
-							de pago</td>
+						<td class=" colored right-title">Colonia:</td>
+						<td class="left-title">
+							${ data?.colonia ?: 'Colonia'}
+						</td>
+						<td colspan="2" class=" colored right-title">C.P.:</td>
+						<td colspan="6" class="left-title">
+							${ data?.cp ?: 'C.P.'}
+						</td>
+						<td colspan="1" class="fecha colored border-color-left">País</td>
 					</tr>
 					<tr>
-						<td class=" colored left-title">Ciudad:</td>
-						<td colspan="11"></td>
-						<td class="fecha border-gray-left" rowspan="2"></td>
-					</tr>
-					<tr>
-						<td class=" colored titulo left-title">Estado:</td>
-						<td class="titulo-texto"></td>
-						<td colspan="2" class=" colored left-title">Pais:</td>
-						<td colspan="8" class=" c1-text b-right"></td>
+						<td class=" colored titulo right-title">Ciudad:</td>
+						<td class="left-title">
+							${ data?.ciudad ?: 'Ciudad'}
+						</td>
+						<td colspan="2" class="colored right-title pais-titulo">Estado:</td>
+						<td colspan="6" class="left-title">
+							${ data?.estado ?: 'Estado'}
+						</td>
+						<td class="border-color-left left-title">
+							${ data?.pais ?: 'México'}
+						</td>
 					</tr>
 				</tbody>
 			</table>
 			<table class="table-productos bordered">
-				<tbody>
+				<thead>
 					<tr class="title">
 						<td class="parte colored">Parte</td>
 						<td class="cantidad colored">Cant.</td>
@@ -336,142 +378,90 @@ table.table-datos-empresa {
 						<td class="unitario colored">P.unitario</td>
 						<td class="importe colored">Importe</td>
 					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
+				</thead>
+				<tbody style="height: 150px; min-height: 150px;">
+					<%--	<tr class="title">
+						<td>Parte</td>
+						<td>Cant.</td>
+						<td>Código</td>
+						<td>Descripción</td>
+						<td>Unds</td>
+						<td>P.unitario</td>
+						<td>Importe</td>
 					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
-					<tr class="td-producto">
-						<td class="parte">Parte</td>
-						<td class="cantidad">Cant.</td>
-						<td class="codigo">Código</td>
-						<td class="descripcion">Descripción</td>
-						<td class="unidad">Unds</td>
-						<td class="unitario">P.unitario</td>
-						<td class="importe">Importe</td>
-					</tr>
+					 --%>
+					<g:each in="${data?.productos}">
+						<tr>
+							<td class="parte">
+								${it.parte}
+							</td>
+							<td class="cantidad">
+								${it.cantidad}
+							</td>
+							<td class="codigo">
+								${it.codigo}
+							</td>
+							<td class="descripcion">
+								${it.descripcion}
+							</td>
+							<td class="unidad">
+								${it.unidad}
+							</td>
+							<td class="unitario">
+								<g:formatNumber number="${(it.unitario)?.toBigDecimal()}"
+									format="###,###.00" />
+							</td>
+							<td class="importe  no-border-right">
+								<g:formatNumber number="${(it.importe)?.toBigDecimal()}"
+									format="###,###.00" />
+							</td>
+						</tr>
+					</g:each>
 					<tr>
-						<td colspan="4" class="colored b-top">Importe con letras</td>
-						<td colspan="2" class="colored b-top left-title">Subtotal:</td>
-						<td class="b-top">Un trillon</td>
-					</tr>
-					<tr>
-						<td colspan="4" rowspan="2" class="b-top">Dos trillones de
-							dolares</td>
-						<td colspan="2" class="colored b-top left-title">I.V.A:</td>
-						<td class="b-top">Tres trillones</td>
-					</tr>
-					<tr>
-						<td colspan="2" class="colored b-top left-title">Total:</td>
-						<td class="b-top">
-							<span style="visibility: hidden">A</span>
-						</td>
+						<td
+							style="overflow: hidden; height: 0px ! important; max-height: 0px ! important;"></td>
 					</tr>
 				</tbody>
+				<tfoot>
+					<tr class="border-gray-top">
+						<td colspan="4" class="colored b-top">Importe con letras</td>
+						<td colspan="2" class="colored b-top right-title">Subtotal:</td>
+						<td class="b-top">
+							<g:formatNumber number="${(data?.subtotal)?.toBigDecimal() ?:0 }"
+								format="\$ ###,###.00" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" rowspan="2" class="b-top">
+							${data?.importeLetra ?: 'Importe con letras'}
+						</td>
+						<td colspan="2" class="colored b-top right-title">I.V.A:</td>
+						<td class="b-top">
+							<g:formatNumber number="${(data?.iva)?.toBigDecimal() ?: 0}"
+								format="\$ ###,###.00" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="colored b-top right-title">Total:</td>
+						<td class="b-top">
+							<g:formatNumber number="${(data?.total)?.toBigDecimal() ?: 0}"
+								format="\$ ###,###.00" />
+						</td>
+					</tr>
+				</tfoot>
 			</table>
 			<div class="factura-bottom">
 				<table class="table-opcional bordered">
 					<tbody>
 						<tr>
-							<td>Debemos y pagaremos</td>
+							<td>
+								${ data?.custom1 ?: 'Debemos y pagaremos  la cantidad descrita en el presente documento'}
+							</td>
 						</tr>
 						<tr>
-							<td style="width: 100%">Si esta factura no se paga a su
-								vencimiento generará intereses moratorios del 8% Mensual.</td>
+							<td style="width: 100%">
+								${ data?.custom2 ?: 'Si esta factura no se paga a su vencimiento generará intereses moratorios del 8% Mensual'}
+							</td>
 						</tr>
 					</tbody>
 				</table>
@@ -479,7 +469,10 @@ table.table-datos-empresa {
 					<tbody>
 						<tr>
 							<td rowspan="7" class="bcode border-right">
-								<div>barcode</div>
+								<div>
+									<img src="${data?.qrCode}" style="border: 0px"
+										alt="El codigo de barras se generará automaticamente" />
+								</div>
 							</td>
 						</tr>
 						<tr>
@@ -487,12 +480,8 @@ table.table-datos-empresa {
 								DEL EMISOR</td>
 						</tr>
 						<tr>
-							<td class="b-left break-word ">
-								1234567-101234567-201234567-301234567-MMMMMMMMM-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-.........-201234567-301234567-401234567-501234567-601234567-701234567-80
+							<td class="sello-digital-emisor break-word">
+								${ data?.selloDigitalEmisor ?: 'El Sello digital del emisor se generará automaticamente'}
 							</td>
 						</tr>
 						<tr>
@@ -500,22 +489,17 @@ table.table-datos-empresa {
 								SAT</td>
 						</tr>
 						<tr>
-							<td class="b-left break-word">
-								1234567-101234567-201234567-301234567-MMMMMMMMM-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
+							<td class="sello-digital-sat break-word">
+								${ data?.selloDigitalSat ?: 'El Sello digital del SAT se generará automaticamente'}
 							</td>
 						</tr>
 						<tr>
-							<td class="colored b-left center-title">CADENA ORIGINAL DE
-								COMPLEMENTO DE CERTIFICADO DIGITAL DEL SAT</td>
+							<td class="colored b-left center-title break-word">CADENA
+								ORIGINAL DE COMPLEMENTO DE CERTIFICADO DIGITAL DEL SAT</td>
 						</tr>
 						<tr>
-							<td class="b-left break-word">
-								1234567-101234567-201234567-301234567-MMMMMMMMM-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
-								1234567-101234567-201234567-301234567-401234567-501234567-601234567-701234567-80
+							<td class=" break-word cadena-original">
+								${ data?.cadenaOriginal ?: 'La cadena original de complemento de certificado dígital del SAT se generará automaticamente ' }
 							</td>
 						</tr>
 					</tbody>
@@ -527,16 +511,16 @@ table.table-datos-empresa {
 						</tr>
 						<tr>
 							<td>
-								<span style="visibility: hidden">A</span>
+								${ data?.formaPago ?: 'Efectivo'}
 							</td>
 						</tr>
 						<tr>
-							<td class="colored">No de Cuenta</td>
+							<td class="colored">
+								${ data?.noCuenta}
+							</td>
 						</tr>
 						<tr>
-							<td>
-								<span style="visibility: hidden">A</span>
-							</td>
+							<td></td>
 						</tr>
 						<tr style="height: 45px">
 							<td class="colored">Pago en una sola exibición.</td>
@@ -550,7 +534,7 @@ table.table-datos-empresa {
 						</tr>
 						<tr>
 							<td colspan="4">
-								<span style="visibility: hidden">A</span>
+								${ data?.domicilio ?: 'Click Aquí para establecer el domicilio del emisor' }
 							</td>
 						</tr>
 						<tr>
@@ -558,7 +542,7 @@ table.table-datos-empresa {
 						</tr>
 						<tr>
 							<td colspan="4">
-								<span style="visibility: hidden">A</span>
+								${ data?.lugarExpedicion ?: 'Click aquí para establecer el lugar en donde se expedi la presente factura'}
 							</td>
 						</tr>
 						<tr class="border-top">
@@ -569,16 +553,16 @@ table.table-datos-empresa {
 						</tr>
 						<tr>
 							<td class="border-right">
-								<span style="visibility: hidden">A</span>
+								${ data?.rfcEmisor ?: 'RFC del Emisor'}
 							</td>
 							<td class="border-right">
-								<span style="visibility: hidden">A</span>
+								${ data?.telefono ?: 'Teléfono del Emisor'}
 							</td>
 							<td class="border-right">
-								<span style="visibility: hidden">A</span>
+								${ data?.correo ?: 'Correo del Emisor'}
 							</td>
 							<td>
-								<span style="visibility: hidden">A</span>
+								${ data?.web}
 							</td>
 						</tr>
 						<tr class="border-top" style="text-align: center">

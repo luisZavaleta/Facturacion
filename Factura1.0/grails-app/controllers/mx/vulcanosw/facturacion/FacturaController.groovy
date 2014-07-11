@@ -55,7 +55,7 @@ class FacturaController {
 
 		def cabsaConfig = CabsaConfig.findByNombre("main")
 		//imagenFondo = imagenFondo.fondo
-		[data:cabsaConfig, expedicion:expedicion, ubicacion:ubicacion]
+		[data:null, expedicion:expedicion, ubicacion:ubicacion]
 	}
 
 

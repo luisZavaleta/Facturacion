@@ -1182,58 +1182,6 @@ function hardTrim(text) {
 	return text
 }
 
-// File shits, required jansy file uploader and jquery
-
-function getFileBase64(idFileInput, fileBase64Container) {
-
-	if (window.File && window.FileReader && window.FileList && window.Blob) {
-
-		var files = document.getElementById(idFileInput).files;
-		var file = files[0];
-
-		if (files && file) {
-			var reader = new FileReader();
-
-			reader.onload = function(readerEvt) {
-				var binaryString = readerEvt.target.result;
-				var b64x = btoa(binaryString)
-				// functionToBeExecuted(b64x)
-
-				$(fileBase64Container).html(b64x)
-			};
-
-			reader.readAsBinaryString(file);
-		}
-
-	} else {
-		alert('Utiliza un navegador moderno, como Firefox � Chrome');
-	}
-
-}
-
-/**
- * @fileContainer: �ber container
- * @idFileInput: id of the input with type file
- * @fileBase64Container: container where the file encoded in base64 will be stored.
- */
-
-function fileToBase64(fileContainer, idFileInput, fileBase64Container) {
-
-	$('#' + idFileInput).on('change.bs.fileinput', function() {
-
-		alert("nana")
-		getFileBase64(idFileInput, fileBase64Container)
-
-	});
-
-	$(fileContainer + ' .close').on('click', function() {
-
-		$(fileBase64Container).html("")
-
-	});
-
-}
-
 function changeInfoMesage(type, message) {
 	$(".alert").removeClass("alert-success alert-info alert-warning alert-danger")
 	$(".alert").addClass(type)
@@ -1340,12 +1288,9 @@ Number.prototype.formatNumber = function(n, x) {
 	return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$1,');
 };
 
-
 String.prototype.formatNumber = function(n, x) {
-	
 
-
-	if(isNaN(this)){
+	if (isNaN(this)) {
 		return this
 	}
 	var thiz = parseFloat(this)
@@ -1354,9 +1299,6 @@ String.prototype.formatNumber = function(n, x) {
 	return thiz.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$1,');
 };
 
-
 String.prototype.unformatNumber = function() {
 	return this.split(",").join("");
 };
-
-

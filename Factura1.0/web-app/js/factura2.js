@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
+
 	avoidEmptyFields()
 	cleanDefaultValue()
 	// JQUERY HACK CONTENT EDITABLE
-	jQueryHackContenteditable()
+	
+	
+	
 	// MODAL CONFIG
 	modalConfig()
 	fileToBase64(".certificado-container", "certificado", ".certificado-base64")
@@ -23,7 +26,7 @@ $(document).ready(function() {
 	autocompleateFormaDePago()
 	changeDomicilio()
 	changeLugarExpedicion()
-	guardarUbicacion()//factura/factura
+	guardarUbicacion()// factura/factura
 
 });
 
@@ -471,11 +474,8 @@ function veryfyCantidad() {
 		var mult = preciseMultiplyOrNull(value, unitario)
 
 		var importez = preciseRound(mult.toString(), 2)
-	
-		
+
 		importez = importez.formatNumber(2)
-
-
 
 		tr.find(".importe span.text").html(importez)
 

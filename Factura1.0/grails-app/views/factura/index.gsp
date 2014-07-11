@@ -6,7 +6,8 @@
 <r:require modules="factura" />
 <r:require modules="index" />
 <r:require modules="indexcss" />
-
+<r:require modules="jasny" />
+<r:require modules="modal" />
 <meta name="layout" content="main" />
 <title>-</title>
 <%--
@@ -52,7 +53,7 @@
 --%>
 <g:javascript src="big.min.js" />
 </head>
-<body class="facturacion">
+<body>
 	<img src="${resource(dir: 'images', file: 'ajax-loader.gif')}"
 		id="loading-indicator"
 		style="display: none; width: 45px; height: 45px; z-index: 999999" />
