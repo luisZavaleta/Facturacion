@@ -39,6 +39,7 @@ modules = {
 
 	factura{
 		dependsOn "jqueryui"
+		resource url:"js/factura/custom/listas.js"
 		resource url:"js/factura/custom/index.js"
 		resource url:"js/factura/custom/index-helper.js"
 

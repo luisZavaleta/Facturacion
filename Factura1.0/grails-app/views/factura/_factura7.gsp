@@ -303,9 +303,7 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span class="regimen-fiscal-text">
-								${data?.regimenFiscal ?: "---" }
-							</span>
+							<span class="regimen-fiscal"> ${data?.regimenFiscal ?: "---"}</span>
 						</td>
 					</tr>
 				</tbody>
@@ -315,11 +313,13 @@ table.table-datos-empresa {
 					<tr>
 						<td class="colored titulo right-title">Cliente:</td>
 						<td class="titulo-texto left-title">
-							${data?.nombre ?: 'Nombre'}
+							<span class="nombre-receptor"> ${data?.nombre ?: 'Escriba el nombre del cliente'}
+							</span>
 						</td>
 						<td colspan="2" class=" colored right-title">RFC:</td>
 						<td colspan="6" class=" left-title">
-							${ data?.rfcReceptor ?: 'RFC del Cliente'}
+							<span class="rfc-receptor"> ${ data?.rfcReceptor ?: 'Escriba el RFC del Cliente'}
+							</span>
 						</td>
 						<td colspan="1" class="fecha colored  border-color-left">Fecha
 							expedición</td>
@@ -327,15 +327,18 @@ table.table-datos-empresa {
 					<tr>
 						<td class="colored right-title">Calle:</td>
 						<td class="left-title">
-							${ data?.calle ?: 'Calle'}
+							<span class="calle-receptor"> ${ data?.calle ?: 'Escriba la calle del domicilio del cliente'}
+							</span>
 						</td>
-						<td colspan="2" class=" colored right-title">Int.:</td>
+						<td colspan="2" class=" colored right-title">Ext.</td>
 						<td colspan="2" class=" left-title">
-							${ data?.interior ?: 'Int.'}
+							<span class="int-receptor"> ${ data?.exterior ?: '---'}
+							</span>
 						</td>
-						<td colspan="2" class=" colored right-title">Ext:</td>
+						<td colspan="2" class=" colored right-title">Int.</td>
 						<td colspan="2" class="left-title">
-							${ data?.exterior ?: 'Ext.'}
+							<span class="ext-receptor"> ${ data?.interior ?: '---'}
+							</span>
 						</td>
 						<td colspan="1" class="border-color-left left-title">
 							${ data?.fechaExpedicion ?: 'Fecha de expedición'}
@@ -344,25 +347,25 @@ table.table-datos-empresa {
 					<tr>
 						<td class=" colored right-title">Colonia:</td>
 						<td class="left-title">
-							${ data?.colonia ?: 'Colonia'}
+							<span class="colonia-receptor"> ${ data?.colonia ?: 'Escriba la colonia del domicilio del cliente'}</span>
 						</td>
 						<td colspan="2" class=" colored right-title">C.P.:</td>
 						<td colspan="6" class="left-title">
-							${ data?.cp ?: 'C.P.'}
+							<span class="cp-receptor"> ${ data?.cp ?: 'Escriba C.P. del cliente'}</span>
 						</td>
 						<td colspan="1" class="fecha colored border-color-left">País</td>
 					</tr>
 					<tr>
 						<td class=" colored titulo right-title">Ciudad:</td>
 						<td class="left-title">
-							${ data?.ciudad ?: 'Ciudad'}
+							<span class="ciudad-receptor"> ${ data?.ciudad ?: 'Escriba la ciudad del domicilio del cliente'}</span>
 						</td>
 						<td colspan="2" class="colored right-title pais-titulo">Estado:</td>
 						<td colspan="6" class="left-title">
-							${ data?.estado ?: 'Estado'}
+							<span class="estado-receptor"> ${ data?.estado ?: 'Estado del dom. del cliente'}</span>
 						</td>
 						<td class="border-color-left left-title">
-							${ data?.pais ?: 'México'}
+							<span class="pais-receptor"> ${ data?.pais ?: 'México'}</span>
 						</td>
 					</tr>
 				</tbody>

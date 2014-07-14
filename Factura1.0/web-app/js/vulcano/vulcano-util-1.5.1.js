@@ -798,8 +798,6 @@ function neverEmpty(params) {
 
 	var element = $(params.selector)
 
-	// if (exists(element)) {
-
 	$(document).on(params.event, params.selector, function() {
 
 		var text = $(this).html()
@@ -811,12 +809,6 @@ function neverEmpty(params) {
 		}
 
 	});
-
-	// element.on(, function() {
-
-	// });
-
-	// }
 
 }
 
