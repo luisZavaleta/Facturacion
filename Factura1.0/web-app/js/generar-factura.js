@@ -3,9 +3,9 @@ $(document).ready(function() {
 	overrideJQueryHtmlHardTrim()
 
 	// testValidacion()<td class="codigo">
-	generarFactura()
+	//generarFactura()
 
-	mutuallyExclusiveAcordionButton(".p-clientes", ".panel-body .accordion-header button")
+	/*mutuallyExclusiveAcordionButton(".p-clientes", ".panel-body .accordion-header button")
 	mutuallyExclusiveAcordionButton(".cabsa", "button")
 	mutuallyExclusiveAcordionButton(".table.productos", ".val-botones button")
 	modalFactura()
@@ -16,7 +16,7 @@ $(document).ready(function() {
 	descargarPDF()
 	cancelarFactura()
 
-	blabla()
+	blabla()*/
 
 });
 

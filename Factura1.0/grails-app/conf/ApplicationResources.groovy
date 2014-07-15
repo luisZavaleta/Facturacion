@@ -38,15 +38,23 @@ modules = {
 
 
 	factura{
+		dependsOn "jquery"
 		dependsOn "jqueryui"
-		resource url:"js/factura/custom/listas.js"
-		resource url:"js/factura/custom/index.js"
-		resource url:"js/factura/custom/index-helper.js"
+		dependsOn "util"
 
 
-		resource url:"js/generar-factura.js"
+		resource url:"js/factura/lib/listas.js"
+		resource url:"js/factura/custom/facturacion-config.js"
+		resource url:"js/factura/lib/facturacion.js"
+		resource url:"js/factura/lib/facturacion-helper.js"
 	}
 
+
+	facturatest{
+		dependsOn "factura"
+
+		resource url:"js/factura/lib/facturacion-test.js"
+	}
 
 	index{
 		dependsOn "util"

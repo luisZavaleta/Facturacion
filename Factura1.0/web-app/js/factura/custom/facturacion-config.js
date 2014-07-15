@@ -24,7 +24,17 @@ var ciudadReceptor = {}
 var estadoReceptor = {}
 var paisReceptor = {}
 
-var structure = [ regimenFiscal, nombreReceptor, rfcReceptor, calleReceptor, intReceptor, extReceptor, coloniaReceptor,
+var structure = {}
+
+var conceptos = {}
+
+structure.conceptos = conceptos
+
+conceptos.selector = ".table-productos tbody"
+conceptos.trHtml = getConceptosTr()
+conceptos.defaultValue = "---"
+
+structure.fields = [ regimenFiscal, nombreReceptor, rfcReceptor, calleReceptor, intReceptor, extReceptor, coloniaReceptor,
 		cpReceptor, ciudadReceptor, estadoReceptor, paisReceptor ]
 
 var baseOptions = {}
@@ -94,59 +104,19 @@ paisReceptor.selector = ".pais-receptor"
 paisReceptor.defaultValue = "México"
 addBaseOption(paisReceptor)
 
-function facturize(structure) {
+function getConceptosTr() {
+	var conceptosTr = multiline(function() {/*
+						<tr class="title">
+							<td contenteditable="true">---</td>
+							<td class="cantidad" contenteditable="true">---</td>
+							<td contenteditable="true">---</td>
+							<td class="descripcion" contenteditable="true">---</td>
+							<td class="unidad" contenteditable="true">---</td>
+							<td class="valorUnitario" contenteditable="true">---</td>
+							<td class="importe" contenteditable="true">---</td>
+						</tr>
+					 */
+	});
 
-	if (debug) {
-		console.log("FACTURA STRUCTURE")
-		console.log(JSON.stringify(structure))
-
-	}
-
-	$.each(structure, function(index, value) {
-
-		var item = $(value.selector)
-
-		if (!!item) {
-
-			if (!!value.editable) {
-				item.attr("contenteditable", true)
-			}
-
-			if (!!value.notEmpty) {
-
-				if (!value.defaultValue) {
-					value.defaultValue = "---"
-				}
-
-				var notEmptyParams = {}
-
-				notEmptyParams.selector = value.selector
-				notEmptyParams.event = "focusout"
-				notEmptyParams.nonEmpty = value.defaultValue
-
-				neverEmpty(notEmptyParams)
-			}
-
-			if (!!value.blankOnDefault) {
-				item.on("focus", function() {
-
-					if (item.html() == value.defaultValue) {
-						item.html("")
-					}
-				})
-
-			}
-
-			if (!!value.autocompleate) {
-
-				console.log("AUTOCOMPLEATE")
-				item.autocomplete({
-					source : value.autocompleate
-				});
-
-			}
-
-		}
-	})
-
+	return conceptosTr;
 }

@@ -303,7 +303,8 @@ table.table-datos-empresa {
 					</tr>
 					<tr>
 						<td>
-							<span class="regimen-fiscal"> ${data?.regimenFiscal ?: "---"}</span>
+							<span class="regimen-fiscal"> ${data?.regimenFiscal ?: "---"}
+							</span>
 						</td>
 					</tr>
 				</tbody>
@@ -341,7 +342,7 @@ table.table-datos-empresa {
 							</span>
 						</td>
 						<td colspan="1" class="border-color-left left-title">
-							${ data?.fechaExpedicion ?: 'Fecha de expedición'}
+							${ data?.fechaExpedicion ?: 'Dato proveído por el sistema'}
 						</td>
 					</tr>
 					<tr>
@@ -383,16 +384,7 @@ table.table-datos-empresa {
 					</tr>
 				</thead>
 				<tbody style="height: 150px; min-height: 150px;">
-					<%--	<tr class="title">
-						<td>Parte</td>
-						<td>Cant.</td>
-						<td>Código</td>
-						<td>Descripción</td>
-						<td>Unds</td>
-						<td>P.unitario</td>
-						<td>Importe</td>
-					</tr>
-					 --%>
+					
 					<g:each in="${data?.productos}">
 						<tr>
 							<td class="parte">
@@ -420,7 +412,7 @@ table.table-datos-empresa {
 							</td>
 						</tr>
 					</g:each>
-					<tr>
+					<tr class="dummie">
 						<td
 							style="overflow: hidden; height: 0px ! important; max-height: 0px ! important;"></td>
 					</tr>
