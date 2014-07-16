@@ -43,14 +43,17 @@ function isTrEmpty(params) {
  */
 function deleteInnerEmptyTr(params) {
 
-	var trs = $(params.selector + " tbody   tr:not('.dummie'):not(:last-child)")
+	var trs = $(params.selector + " tr:not('.dummie'):not(:last-child)")
 
-	trs.map(function() {
-		params.tr = $(this)
-		if (isTrEmpty(params)) {
-			$(this).remove()
-		}
-	})
+	if (trs.length > 1) {
+
+		trs.map(function() {
+			params.tr = $(this)
+			if (isTrEmpty(params)) {
+				$(this).remove()
+			}
+		})
+	}
 }
 
 /**
@@ -65,14 +68,7 @@ function deleteInnerEmptyTr(params) {
  * @trHtml: tr html
  */
 function addLastTrIfNotEmpty(params) {
-
-	console.log("addLastTrIfNotEmpty")
-	console.log(params.selector + " tr:not('.dummie'):last-child")
-
 	var lastTr = $(params.selector + " tr:not('.dummie')").last()
-
-	console.log(lastTr)
-
 	if (!!lastTr) {
 		params.tr = lastTr
 		if (!isTrEmpty(params)) {

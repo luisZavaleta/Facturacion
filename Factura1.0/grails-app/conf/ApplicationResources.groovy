@@ -41,6 +41,7 @@ modules = {
 		dependsOn "jquery"
 		dependsOn "jqueryui"
 		dependsOn "util"
+		dependsOn "precisedecimals"
 
 
 		resource url:"js/factura/lib/listas.js"
@@ -72,4 +73,7 @@ modules = {
 		resource url:"js/bootstrap-modalmanager.js"
 		resource url:"js/bootstrap-modal.js"
 	}
+
+
+	precisedecimals{ resource url:"js/big.min.js" }
 }

@@ -33,6 +33,7 @@ structure.conceptos = conceptos
 conceptos.selector = ".table-productos tbody"
 conceptos.trHtml = getConceptosTr()
 conceptos.defaultValue = "---"
+conceptos.skip = [ 6 ]
 
 structure.fields = [ regimenFiscal, nombreReceptor, rfcReceptor, calleReceptor, intReceptor, extReceptor, coloniaReceptor,
 		cpReceptor, ciudadReceptor, estadoReceptor, paisReceptor ]
@@ -106,16 +107,16 @@ addBaseOption(paisReceptor)
 
 function getConceptosTr() {
 	var conceptosTr = multiline(function() {/*
-						<tr class="title">
-							<td contenteditable="true">---</td>
-							<td class="cantidad" contenteditable="true">---</td>
-							<td contenteditable="true">---</td>
-							<td class="descripcion" contenteditable="true">---</td>
-							<td class="unidad" contenteditable="true">---</td>
-							<td class="valorUnitario" contenteditable="true">---</td>
-							<td class="importe" contenteditable="true">---</td>
-						</tr>
-					 */
+				<tr class="title">
+					<td contenteditable="true">---</td>
+					<td class="cantidad" contenteditable="true">---</td>
+					<td contenteditable="true">---</td>
+					<td class="descripcion" contenteditable="true">---</td>
+					<td class="unidad" contenteditable="true">---</td>
+					<td class="valorUnitario" contenteditable="true">---</td>
+					<td class="importe">0</td>
+				</tr>
+			*/
 	});
 
 	return conceptosTr;

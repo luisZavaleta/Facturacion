@@ -465,12 +465,27 @@ function markEditedElements() {
 	})
 
 }
-
+/**
+ * Check if a var is int, accept Strings
+ */
 function isInt(n) {
+
+	if (typeof n == "string") {
+		n = parseFloat(n)
+	}
+
 	return +n === n && !(n % 1);
 }
 
+/**
+ * Check if a var is float, accept Strings
+ */
 function isFloat(n) {
+
+	if (typeof n == "string") {
+		n = parseFloat(n)
+	}
+
 	return +n === n;
 }
 
@@ -925,6 +940,25 @@ function preciseMultiplyOrNull(a, b) {
 	}
 }
 
+function preciseMultiplyOrEmpty(a, b, decimals) {
+
+	if (!decimals) {
+		decimals = 2
+	}
+	if ($.isNumeric(a) && $.isNumeric(b)) {
+
+		a = new Big(a)
+		b = new Big(b)
+
+		var tms = a.times(b)
+
+		return tms.toFixed(2);
+
+	} else {
+		return "";
+	}
+}
+
 /**
  * END REQUIRES BIG.JS
  */
@@ -972,7 +1006,14 @@ function jQueryHtmlToNormal() {
 	}
 }
 
-// formating number
+/**
+ * Format a number, tranforming it to a String.
+ * 
+ * @param n:Integer
+ *        length of decimal
+ * @param x:Integer
+ *        length of sections
+ */
 Number.prototype.formatNumber = function(n, x) {
 	var re = '(\\d)(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
 	return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$1,');
@@ -1001,7 +1042,7 @@ String.prototype.unformatNumber = function() {
  * <h1>❤ unicorns</h1>
  * </body> </html> });
  * 
- * @autho: Sindre Sorhus
+ * @author: Sindre Sorhus
  * @url: https://github.com/sindresorhus/multiline/blob/master/browser.js
  **************************************************************************************************/
 !function(e) {
@@ -1092,3 +1133,46 @@ String.prototype.unformatNumber = function() {
 		}, {} ]
 	}, {}, [ 1 ])(1)
 });
+
+// Added July 16
+
+/**
+ * Clean the html if the value is not a Number, if its a number format it
+ * 
+ * @selector: selector or element
+ * @live: true if the funcion will be valid for elements created in the future
+ * @defaultValue: default valu to be put in not Number fields, defaul empty
+ */
+
+function cleanIfNotNumber(params) {
+
+	if (!params.defaultValue) {
+		params.defaultValue = ""
+	}
+
+	if (!!params.live) {
+		$(document).on("focusout", params.selector, function() {
+			var value = $(this).html()
+			value = value.unformatNumber()
+			console.log(value)
+
+			if (isFloat(value)) {
+				$(this).html(value.formatNumber(2, 3))
+			} else {
+				$(this).html(params.defaultValue)
+			}
+		})
+	} else {
+		$(params.selector).on("focusout", function() {
+			var value = $(this).html()
+			value = value.unformatNumber()
+
+			if (isFloat(value)) {
+				$(this).html(value.formatNumber(2, 3))
+			} else {
+				$(this).html(params.defaultValue)
+			}
+
+		})
+	}
+}

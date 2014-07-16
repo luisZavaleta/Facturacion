@@ -78,7 +78,8 @@ function configTablaConceptos(conceptos) {
 	});
 
 	// blank of default and focus
-	$(tdSelector).on("focus", function() {
+
+	$(document).on("focus", tdSelector, function() {
 
 		if (hardTrim($(this).html()) == hardTrim(conceptos.defaultValue)) {
 			$(this).html("")
@@ -90,7 +91,6 @@ function configTablaConceptos(conceptos) {
 	if (!conceptos.defaultValue) {
 		conceptos.defaultValue = "---"
 	}
-
 	var notEmptyParams = {}
 	notEmptyParams.selector = tdSelector
 	notEmptyParams.event = "focusout"
@@ -98,9 +98,43 @@ function configTablaConceptos(conceptos) {
 	neverEmpty(notEmptyParams)
 
 	$(document).on("focusout", tdSelector, function() {
-
-		console.log("focusOut")
+		deleteInnerEmptyTr(conceptos)
 		addLastTrIfNotEmpty(conceptos)
+	})
+
+	var params = {}
+	params.selector = ".cantidad"
+	params.live = true
+	params.defaultValue = "---"
+	cleanIfNotNumber(params)
+
+	params.selector = ".valorUnitario"
+	cleanIfNotNumber(params)
+
+	$(document).on("focusout", ".cantidad, .valorUnitario", function() {
+
+		var cantidad = $(this).parent().find(".cantidad").html()
+		var valor = $(this).parent().find(".valorUnitario").html()
+
+		cantidad = cantidad.unformatNumber()
+		valor = valor.unformatNumber()
+
+		console.log(!!cantidad)
+
+		console.log(!!valor)
+
+		console.log(!isNaN(cantidad))
+
+		console.log(!isNaN(valor))
+		if (!!cantidad && !!valor && !isNaN(cantidad) && !isNaN(valor)) {
+
+			var importex = preciseMultiplyOrEmpty(cantidad, valor)
+			console.log("importex--->" + importex)
+			console.log(importex)
+			var importe = $(this).parent().find(".importe")
+			importe.html(importex)
+
+		}
 
 	})
 
