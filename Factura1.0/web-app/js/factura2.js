@@ -552,9 +552,6 @@ function calcularSubtotal() {
 }
 
 function fillImporteLetra(letra) {
-	// var letra = $(".total span").html()
-
-	// letra = hardTrim(letra)
 
 	$.post(getAbsolutePath("/util/letra/" + letra)).done(function(data) {
 

@@ -235,7 +235,7 @@ table.table-datos-empresa {
 }
 
 .right-title {
-	text-align: right;
+	text-align: right !important;
 	padding-right: 5px;
 }
 
@@ -245,6 +245,16 @@ table.table-datos-empresa {
 
 .sello-digital-emisor,.sello-digital-sat,.cadena-original {
 	height: 50px;
+}
+
+table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.table-productos tr td.iva,table.table-productos tr td.total
+	{
+	text-align: right;
+	padding-right: 5px;
+}
+
+.importe-letra {
+	padding-right: 5px;
 }
 </style>
 </head>
@@ -384,7 +394,6 @@ table.table-datos-empresa {
 					</tr>
 				</thead>
 				<tbody style="height: 150px; min-height: 150px;">
-					
 					<g:each in="${data?.productos}">
 						<tr>
 							<td class="parte">
@@ -420,25 +429,25 @@ table.table-datos-empresa {
 				<tfoot>
 					<tr class="border-gray-top">
 						<td colspan="4" class="colored b-top">Importe con letras</td>
-						<td colspan="2" class="colored b-top right-title">Subtotal:</td>
-						<td class="b-top">
+						<td colspan="2" class="colored b-top right-title ">Subtotal:</td>
+						<td class="b-top subtotal">
 							<g:formatNumber number="${(data?.subtotal)?.toBigDecimal() ?:0 }"
 								format="\$ ###,###.00" />
 						</td>
 					</tr>
 					<tr>
-						<td colspan="4" rowspan="2" class="b-top">
+						<td colspan="5" rowspan="2" class="b-top importe-letra">
 							${data?.importeLetra ?: 'Importe con letras'}
 						</td>
-						<td colspan="2" class="colored b-top right-title">I.V.A:</td>
-						<td class="b-top">
+						<td colspan="1" class="colored b-top right-title">I.V.A:</td>
+						<td class="b-top iva">
 							<g:formatNumber number="${(data?.iva)?.toBigDecimal() ?: 0}"
 								format="\$ ###,###.00" />
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2" class="colored b-top right-title">Total:</td>
-						<td class="b-top">
+						<td colspan="1" class="colored b-top right-title">Total:</td>
+						<td class="b-top total">
 							<g:formatNumber number="${(data?.total)?.toBigDecimal() ?: 0}"
 								format="\$ ###,###.00" />
 						</td>

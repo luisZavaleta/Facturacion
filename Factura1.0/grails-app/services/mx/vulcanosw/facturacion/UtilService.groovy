@@ -54,31 +54,24 @@ class UtilService {
 
 
 
-	def toMoney(String cantidad){
+	def toMoney(String cantidad, String iso4217){
 
 
-		println(cantidad)
 		Moneda moneda = new Moneda()
 
+		moneda.codigoISO = iso4217;
+
 		if(cantidad != null){
-
 			moneda.cantidad = cantidad.toBigDecimal()
-
 			def cantidadSplit = cantidad.split("\\.")
-			println(cantidadSplit)
-
-
 			def letras = numeroALetraService.letra(cantidadSplit[0]?.toInteger())
 			moneda.letra = letras[0].toUpperCase() + letras.substring(1)
-
 			if(cantidadSplit.size() > 1){
 				moneda.centavos = cantidadSplit[1]+"/100"
 			}
 		}
-
 		return moneda
 	}
-
 
 
 

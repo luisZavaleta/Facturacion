@@ -46,7 +46,7 @@ function facturize(structure) {
 
 			if (!!value.autocompleate) {
 
-				console.log("AUTOCOMPLEATE")
+			
 				item.autocomplete({
 					source : value.autocompleate
 				});
@@ -60,82 +60,21 @@ function facturize(structure) {
 
 function configTablaConceptos(conceptos) {
 
+	// ADD ONE TR ON LOAD IF EMPTY
 	var tdSelector = conceptos.selector + " td"
 
-	var tabla = $(conceptos.selector)
-	var trs = tabla.find("tr:not('.dummie')")
-	if (trs.length == 0) {
-		tabla.prepend(conceptos.trHtml)
-		trs = tabla.find("tr:not('.dummie')")
-	}
-
-	var tds = trs.find("td")
-
-	$.map(tds, function(td, i) {
-		if (!$(td).html()) {
-			$(td).html(conceptos.defaultValue)
-		}
-	});
-
-	// blank of default and focus
-
-	$(document).on("focus", tdSelector, function() {
-
-		if (hardTrim($(this).html()) == hardTrim(conceptos.defaultValue)) {
-			$(this).html("")
-		}
-	})
-
-	// never empty
-
-	if (!conceptos.defaultValue) {
-		conceptos.defaultValue = "---"
-	}
-	var notEmptyParams = {}
-	notEmptyParams.selector = tdSelector
-	notEmptyParams.event = "focusout"
-	notEmptyParams.nonEmpty = conceptos.defaultValue
-	neverEmpty(notEmptyParams)
+	addTROnLoad(conceptos)
+	cleanOnFocus(conceptos, tdSelector)
+	preventEmpty(conceptos, tdSelector)
 
 	$(document).on("focusout", tdSelector, function() {
 		deleteInnerEmptyTr(conceptos)
 		addLastTrIfNotEmpty(conceptos)
 	})
 
-	var params = {}
-	params.selector = ".cantidad"
-	params.live = true
-	params.defaultValue = "---"
-	cleanIfNotNumber(params)
-
-	params.selector = ".valorUnitario"
-	cleanIfNotNumber(params)
-
-	$(document).on("focusout", ".cantidad, .valorUnitario", function() {
-
-		var cantidad = $(this).parent().find(".cantidad").html()
-		var valor = $(this).parent().find(".valorUnitario").html()
-
-		cantidad = cantidad.unformatNumber()
-		valor = valor.unformatNumber()
-
-		console.log(!!cantidad)
-
-		console.log(!!valor)
-
-		console.log(!isNaN(cantidad))
-
-		console.log(!isNaN(valor))
-		if (!!cantidad && !!valor && !isNaN(cantidad) && !isNaN(valor)) {
-
-			var importex = preciseMultiplyOrEmpty(cantidad, valor)
-			console.log("importex--->" + importex)
-			console.log(importex)
-			var importe = $(this).parent().find(".importe")
-			importe.html(importex)
-
-		}
-
-	})
+	cleanValueAndUnitarioIfNotNumber()
+	calculateImporte()
 
 }
+
+

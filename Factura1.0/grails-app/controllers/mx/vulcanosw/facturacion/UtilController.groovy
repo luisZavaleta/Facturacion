@@ -1,6 +1,5 @@
 package mx.vulcanosw.facturacion
 
-import grails.converters.JSON
 import mx.vulcanosw.vo.Moneda
 
 class UtilController {
@@ -10,14 +9,17 @@ class UtilController {
 
 
 	def letra() {
+
+
 		def cantidad = params.id
+		def iso4217 = params.iso4217
 
+		if(!iso4217){
+			iso4217 = "MXN"
+		}
 
-		Moneda moneda = utilService.toMoney(cantidad)
-
-
-
-		render moneda as JSON
+		Moneda moneda = utilService.toMoney(cantidad, iso4217)
+		render moneda.toString()
 		return
 	}
 }
