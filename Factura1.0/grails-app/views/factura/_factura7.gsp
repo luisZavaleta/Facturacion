@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -458,12 +459,12 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 				<table class="table-opcional bordered">
 					<tbody>
 						<tr>
-							<td>
+							<td class="custom1">
 								${ data?.custom1 ?: 'Debemos y pagaremos  la cantidad descrita en el presente documento'}
 							</td>
 						</tr>
 						<tr>
-							<td style="width: 100%">
+							<td class="custom2">
 								${ data?.custom2 ?: 'Si esta factura no se paga a su vencimiento generará intereses moratorios del 8% Mensual'}
 							</td>
 						</tr>
@@ -515,18 +516,19 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 						<tr>
 							<td>
-								${ data?.formaPago ?: 'Efectivo'}
+								<span class="metodoDePago"> ${ data?.formaPago ?: 'Efectivo'}
+								</span>
 							</td>
 						</tr>
 						<tr>
-							<td class="colored">
-								${ data?.noCuenta}
-							</td>
+							<td class="colored">No de Cuenta</td>
 						</tr>
 						<tr>
-							<td></td>
+							<td class="NumCtaPago">
+								${ data?.noCuenta ?: 'No aplica'}
+							</td>
 						</tr>
-						<tr style="height: 45px">
+						<tr style="height: 45px" class="formaDePago">
 							<td class="colored">Pago en una sola exibición.</td>
 						</tr>
 					</tbody>
@@ -557,22 +559,22 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 						<tr>
 							<td class="border-right">
-								${ data?.rfcEmisor ?: 'RFC del Emisor'}
+								${ data?.rfcEmisor}
 							</td>
-							<td class="border-right">
-								${ data?.telefono ?: 'Teléfono del Emisor'}
+							<td class="border-right telefono-emisor">
+								${ data?.telefono ?: '---'}
 							</td>
-							<td class="border-right">
-								${ data?.correo ?: 'Correo del Emisor'}
+							<td class="border-right correo-emisor">
+								${ data?.correo ?: '---'}
 							</td>
-							<td>
-								${ data?.web}
+							<td class="web-emisor">
+								${ data?.web ?: '---'}
 							</td>
 						</tr>
 						<tr class="border-top" style="text-align: center">
 							<td colspan="4" class="b-top">
-								<strong> ESTE DOCUMENTO ES UNA REPRESENTACIN IMPRESA DE
-									UN CFDI </strong>
+								<strong> ESTE DOCUMENTO ES UNA REPRESENTACIÓN IMPRESA
+									DE UN CFDI </strong>
 								.
 							</td>
 						</tr>

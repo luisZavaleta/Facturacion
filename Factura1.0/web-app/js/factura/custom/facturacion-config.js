@@ -27,6 +27,15 @@ var paisReceptor = {}
 var structure = {}
 
 var conceptos = {}
+var custom1 = {}
+var custom2 = {}
+
+var metodoDePago = {}
+var numCtaPago = {}
+
+var telefonoEmisor = {}
+var correoEmisor = {}
+var webEmisor = {}
 
 structure.conceptos = conceptos
 
@@ -36,7 +45,8 @@ conceptos.defaultValue = "---"
 conceptos.skip = [ 6 ]
 
 structure.fields = [ regimenFiscal, nombreReceptor, rfcReceptor, calleReceptor, intReceptor, extReceptor, coloniaReceptor,
-		cpReceptor, ciudadReceptor, estadoReceptor, paisReceptor ]
+		cpReceptor, ciudadReceptor, estadoReceptor, paisReceptor, custom1, custom2, metodoDePago, numCtaPago,
+		telefonoEmisor, correoEmisor, webEmisor ]
 
 var baseOptions = {}
 
@@ -105,6 +115,41 @@ paisReceptor.selector = ".pais-receptor"
 paisReceptor.defaultValue = "México"
 addBaseOption(paisReceptor)
 
+custom1.selector = ".custom1"
+custom1.defaultValue = "Debemos y pagaremos la cantidad descrita en el presente documento."
+addBaseOption(custom1)
+
+custom2.selector = ".custom2"
+custom2.defaultValue = "Si esta factura no se paga a su vencimiento generará intereses moratorios del 5% Mensual "
+addBaseOption(custom2)
+
+metodoDePago.selector = ".metodoDePago"
+metodoDePago.defaultValue = "Efectivo"
+addBaseOption(metodoDePago)
+metodoDePago.autocompleate = metodoPago
+
+numCtaPago.selector = ".NumCtaPago"
+numCtaPago.defaultValue = "No aplica"
+
+telefonoEmisor.selector = ".telefono-emisor"
+telefonoEmisor.defaultValue = "---"
+addBaseOption(telefonoEmisor)
+
+correoEmisor.selector = ".correo-emisor"
+correoEmisor.defaultValue = "---"
+addBaseOption(correoEmisor)
+
+webEmisor.selector = ".web-emisor"
+webEmisor.defaultValue = "---"
+addBaseOption(webEmisor)
+
+/*
+ * var telefonoEmisor = {}
+var correoEmisor = {}
+var webEmisor = {}
+
+ * */
+
 function getConceptosTr() {
 	var conceptosTr = multiline(function() {/*
 				<tr class="title">
@@ -116,7 +161,7 @@ function getConceptosTr() {
 					<td class="valorUnitario" contenteditable="true">---</td>
 					<td class="importe">0</td>
 				</tr>
-			*/
+					*/
 	});
 
 	return conceptosTr;
