@@ -7,7 +7,7 @@
 <r:require modules="index" />
 <r:require modules="indexcss" />
 <r:require modules="jasny" />
-<r:require modules="modal" />
+<r:require modules="modalVulcano" />
 <meta name="layout" content="main" />
 <title>-</title>
 <%--
@@ -72,23 +72,21 @@
 					<div class="col-md-12 boton factura">
 						<a href="#responsive"
 							class="btn btn-block btn-factura btn-primary generar-factura">
-							<span class="glyphicon glyphicon-list-alt"></span>
-							<span class="texto">GENERAR FACTURA</span>
-							<span></span>
+							<span class="glyphicon glyphicon-list-alt"></span> <span
+								class="texto">GENERAR FACTURA</span> <span></span>
 						</a>
 					</div>
 					<div class="col-md-12 boton config">
 						<a href="#"
 							class="btn btn-block btn-factura btn-dos nota-remision">
-							<span class="glyphicon glyphicon-tasks"></span>
-							<span class="texto">REMISIÓN</span>
+							<span class="glyphicon glyphicon-tasks"></span> <span
+								class="texto">REMISIÓN</span>
 						</a>
 					</div>
 					<div class="col-md-12 boton clientes">
 						<a href="#responsive" class="btn btn-block btn-factura btn-uno">
-							<span class="glyphicon glyphicon-user"></span>
-							<span class="texto">CLIENTES</span>
-							<span></span>
+							<span class="glyphicon glyphicon-user"></span> <span
+								class="texto">CLIENTES</span> <span></span>
 						</a>
 					</div>
 					<%--
@@ -102,22 +100,22 @@
 					<div class="col-md-12 boton">
 						<a href="#"
 							class="btn btn-block btn-factura btn-info editar-facturas">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span class="texto">EDITAR</span>
+							<span class="glyphicon glyphicon-eye-open"></span> <span
+								class="texto">EDITAR</span>
 						</a>
 					</div>
 					<div class="col-md-12 boton">
 						<a href="#"
 							class="btn btn-block btn-factura btn-cua btn-producto-x">
-							<span class="glyphicon glyphicon-barcode"></span>
-							<span class="texto">PRODUCTOS</span>
+							<span class="glyphicon glyphicon-barcode"></span> <span
+								class="texto">PRODUCTOS</span>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<g:render template="modals" />
+	<g:render template="modals/domicilio" />
 	<input id="baseURL" type="hidden" value="${resource()}">
 </body>
 </html>

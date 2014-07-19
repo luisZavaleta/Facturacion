@@ -594,19 +594,14 @@ function autocompleateFormaDePago() {
 }
 
 function changeDomicilio() {
-
 	$(".domicilio").on("click", function() {
-
 		$('#modal-domicilio').attr("data-type", "domicilio")
-
 		$('#modal-domicilio .modal-title').html("Modificar datos del domicilio")
-
 		$('#modal-domicilio').modal({
 			show : true,
 			keyboard : false
 		})
 	})
-
 }
 
 function changeLugarExpedicion() {

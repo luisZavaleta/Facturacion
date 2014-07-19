@@ -74,6 +74,16 @@ modules = {
 		resource url:"js/bootstrap-modal.js"
 	}
 
+	modalVulcano{
+		dependsOn "bootstrap"
+		dependsOn "modal"
+		dependsOn "jquery"
+
+
+
+		resource url:"js/vulcano/modal/vulcano-modal-1.0.js"
+	}
+
 
 	precisedecimals{ resource url:"js/big.min.js" }
 }

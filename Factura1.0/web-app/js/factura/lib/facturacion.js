@@ -46,7 +46,6 @@ function facturize(structure) {
 
 			if (!!value.autocompleate) {
 
-			
 				item.autocomplete({
 					source : value.autocompleate
 				});
@@ -55,6 +54,8 @@ function facturize(structure) {
 
 		}
 	})
+
+	changeDomicilio()
 
 }
 
@@ -77,4 +78,12 @@ function configTablaConceptos(conceptos) {
 
 }
 
+function changeDomicilio() {
+	var params = {}
 
+	params.selector = ".domicilio-emisor"
+	params.title = "Modificar domicilio del emisor"
+	params.modalSelector = "#modal-domicilio"
+	openModalVulcano(params)
+
+}

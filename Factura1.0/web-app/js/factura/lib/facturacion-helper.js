@@ -200,10 +200,7 @@ function calcularTotales(iva) {
 }
 
 function fillImporteLetra(letra) {
-
 	$.post(getAbsolutePath("/util/letra/" + letra)).done(function(data) {
-
 		$(".importe-letra").html(data);
-
 	});
 }
