@@ -36,8 +36,38 @@ function openModalVulcano(params) {
 			keyboard : false
 		})
 	})
+
+	closeModalVulcano(params)
 }
 
+/**
+ * @selector: Selector of the element to be clicked in order to open the modal.
+ * @modalSelector: Selector of the modal html (Must be hidden in the main page)
+ */
+
+function closeModalVulcano(params) {
+
+	$(document).on("click", params.modalSelector + " .guardar-modal", function() {
+		$('input[data-main-selector]').each(function(index, value) {
+			var val = $(value).val()
+
+			var element = $(params.selector + " " + $(this).attr("data-main-selector"))
+
+			element.html(val)
+
+			if ($(this).attr("data-modal-prefix")) {
+				element.before($(this).attr("data-modal-prefix"))
+
+			}
+
+			if ($(this).attr("data-modal-sufix")) {
+				element.after($(this).attr("data-modal-sufix"))
+			}
+
+		})
+	})
+
+}
 /***************************************************************************************************
  * Elements in the modal most have the arttribute data-main-selector indicating the selector of the
  * main page, this selector must be inside the modalSelector.

@@ -540,7 +540,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 						<tr>
 							<td class="domicilio-emisor" colspan="4">
-								${ data?.domicilio ?: 'Click Aquí para establecer el domicilio del emisor' }
+								<g:render template="factura/domicilio" />
 							</td>
 						</tr>
 						<tr>
