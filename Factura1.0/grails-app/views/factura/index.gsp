@@ -115,7 +115,8 @@
 			</div>
 		</div>
 	</div>
-	<g:render template="modals/domicilio" />
+	<g:render template="modals/domicilio" model="[id:'modal-domicilio']" />
+	<g:render template="modals/domicilio" model="[id:'modal-lugar']" />
 	<input id="baseURL" type="hidden" value="${resource()}">
 </body>
 </html>

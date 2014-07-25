@@ -899,6 +899,8 @@ function changeInfoMesage(type, message) {
 
 }
 
+validate.js
+
 /**
  * Jquery hack to make contenteditable have some propeties normally reserved for input (forexample
  * autocompleate)

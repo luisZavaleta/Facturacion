@@ -540,7 +540,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 						<tr>
 							<td class="domicilio-emisor" colspan="4">
-								<g:render template="factura/domicilio" />
+								<g:render template="factura/domicilio"/>
 							</td>
 						</tr>
 						<tr>
@@ -548,7 +548,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 						<tr>
 							<td class="lugar-expedicion" colspan="4">
-								${ data?.lugarExpedicion ?: 'Click aquí para establecer el lugar en donde se expede la presente factura'}
+								<g:render template="factura/domicilio"/>
 							</td>
 						</tr>
 						<tr class="border-top">

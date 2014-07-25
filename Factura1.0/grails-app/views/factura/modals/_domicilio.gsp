@@ -1,5 +1,5 @@
-<div id="modal-domicilio" class="modal fade" tabindex="-1"
-	data-width="760" style="display: none;">
+<div id="${id}" class="modal fade" tabindex="-1" data-width="760"
+	style="display: none;">
 	<div>
 		<div class="alert alert-success" style="display: none"></div>
 	</div>
@@ -14,7 +14,7 @@
 						<label for="modal-calle" class="col-sm-3 control-label">Calle</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-calle"
-								data-main-selector=".calle" 
+								data-main-selector=".calle" data-modal-sufix="&#32;"
 								placeholder="Avenida, calle, camino o carretera">
 						</div>
 					</div>
@@ -24,6 +24,7 @@
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-exterior"
 								data-main-selector=".exterior" data-modal-prefix="#"
+								data-modal-sufix="&#32;"
 								placeholder="Número particular en donde se da la ubicación sobre una calle dada">
 						</div>
 					</div>
@@ -33,6 +34,7 @@
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-interior"
 								data-main-selector=".interior" data-modal-prefix="Int. "
+								data-modal-sufix="&#32;"
 								placeholder="Información adicional para especificar la ubicación">
 						</div>
 					</div>
@@ -40,7 +42,8 @@
 						<label for="modal-colonia" class="col-sm-3 control-label">Colonia</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-colonia"
-								data-main-selector=".colonia" data-modal-prefix="Col. " data-modal-sufix="."
+								data-main-selector=".colonia" data-modal-prefix="Col. "
+								data-modal-sufix=". "
 								placeholder="Colonia en donde se da la ubicación">
 						</div>
 					</div>
@@ -64,7 +67,8 @@
 						<label for="modal-pais" class="col-sm-3 control-label">País</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-pais"
-								data-main-selector=".pais" data-modal-prefix=", " data-modal-sufix="."
+								data-main-selector=".pais" data-modal-prefix=", "
+								data-modal-sufix="."
 								placeholder="País donde se da la ubicación.">
 						</div>
 					</div>
@@ -73,7 +77,7 @@
 							Postal.</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="modal-cp"
-								data-main-selector=".cp" data-modal-prefix="C.P." 
+								data-main-selector=".cp" data-modal-prefix=" C.P. "
 								placeholder="Código postal en donde se da la ubicación.">
 						</div>
 					</div>
@@ -83,6 +87,7 @@
 	</div>
 	<div class="modal-footer">
 		<button type="button" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
-		<button type="button" class="btn btn-primary guardar-modal">Guardar Datos</button>
+		<button type="button" class="btn btn-primary guardar-modal">Guardar
+			Datos</button>
 	</div>
 </div>

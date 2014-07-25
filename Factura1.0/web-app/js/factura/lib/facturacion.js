@@ -84,6 +84,14 @@ function changeDomicilio() {
 	params.selector = ".domicilio-emisor"
 	params.title = "Modificar domicilio del emisor"
 	params.modalSelector = "#modal-domicilio"
+	params.dataSelector = ".main-data"
+
+	openModalVulcano(params)
+	
+	
+	params = jQuery.extend(true, {}, params);
+	params.modalSelector = "#modal-lugar"
+	params.selector = ".lugar-expedicion"
 	openModalVulcano(params)
 
 }

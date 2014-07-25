@@ -43,21 +43,48 @@ function openModalVulcano(params) {
 /**
  * @selector: Selector of the element to be clicked in order to open the modal.
  * @modalSelector: Selector of the modal html (Must be hidden in the main page)
+ * @dataSelector: Optiona, define a common inner sub-selector, while main data will be store using
+ *                this sub-selector, data-modal prefix and data-modal-sufix won't use it.
  */
 
 function closeModalVulcano(params) {
 
 	$(document).on("click", params.modalSelector + " .guardar-modal", function() {
 		$('input[data-main-selector]').each(function(index, value) {
-			var val = $(value).val()
 
+			var val = $(value).val()
 			var element = $(params.selector + " " + $(this).attr("data-main-selector"))
 
-			element.html(val)
+			if (!val) {
+
+				if (!!params.dataSelector) {
+
+					var span = element.find(params.dataSelector).detach()
+					span.empty()
+					element.empty()
+					element.append(span)
+
+				}
+
+				return true;
+			}
+
+			if (!!params.dataSelector) {
+
+				var span = element.find(params.dataSelector).detach()
+
+				element.empty()
+				element.append(span)
+				element.find(params.dataSelector).html(val)
+
+				element = element.find(params.dataSelector)
+
+			} else {
+				element.html(val)
+			}
 
 			if ($(this).attr("data-modal-prefix")) {
 				element.before($(this).attr("data-modal-prefix"))
-
 			}
 
 			if ($(this).attr("data-modal-sufix")) {
