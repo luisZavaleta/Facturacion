@@ -83,6 +83,10 @@ Object.byString = function(o, s) {
 	return o;
 }
 
+/***************************************************************************************************
+ * Add some element to a json or a array, if the element does not exist add the default value
+ **************************************************************************************************/
+
 function addValToParameter(val, paramName, params, defaultValue) {
 
 	if (exists(defaultValue) && val.trim() == "") {
@@ -95,74 +99,82 @@ function addValToParameter(val, paramName, params, defaultValue) {
 
 }
 
-function jsonToHarcodedParams(jsonObject) {
-
-	var retParam = "?"
-
-	for ( var idx in jsonObject) {
-
-		if (!empty(jsonObject[idx])) {
-
-			retParam += idx
-			retParam += "="
-			retParam += jsonObject[idx]
-			retParam += "&"
-		}
-
+/***************************************************************************************************
+ * Requires BIG.js
+ * 
+ * @test http://jsfiddle.net/VKehf/
+ **************************************************************************************************/
+Number.prototype.sumOrNull = function(b) {
+	try {
+		var sum = Big(this).plus(Big(b))
+		return parseFloat(sum.toString())
+	} catch (e) {
+		return null
 	}
-
-	return retParam
 
 }
 
-function sumOrNull(a, b) {
-	if ($.isNumeric(a) && $.isNumeric(a)) {
-		return (parseInt(a) + parseInt(b));
+/***************************************************************************************************
+ * Requires BIG.js
+ * 
+ * @test: http://jsfiddle.net/VKehf/1/
+ **************************************************************************************************/
+
+Number.prototype.sumOrFirst = function(b) {
+	var sum = this.sumOrNull(b)
+	if (sum == null) {
+		return this
 	} else {
-		return null;
+		return sum
 	}
 }
 
-function sumOrFirst(a, b) {
-	if ($.isNumeric(a) && $.isNumeric(a)) {
-		return (parseInt(a) + parseInt(b));
+/***************************************************************************************************
+ * Requires BIG.js
+ * 
+ * @test http://jsfiddle.net/JE83M/
+ **************************************************************************************************/
+
+Number.prototype.restOrNull = function(b) {
+	return this.sumOrNull(-b)
+}
+
+/***************************************************************************************************
+ * Requires BIG.js
+ * 
+ * @test http://jsfiddle.net/JE83M/1/
+ **************************************************************************************************/
+Number.prototype.multiplyOrNull = function(b) {
+	var mult = Big(this).times(Big(b))
+
+	if (!mult) {
+		return null
 	} else {
-		return a;
+		return parseFloat(mult.toString())
 	}
 }
 
-function restOrNull(a, b) {
-	if ($.isNumeric(a) && $.isNumeric(a)) {
-		return (parseInt(a) - parseInt(b));
-	} else {
-		return null;
-	}
-}
-
-function multiplyOrNull(a, b) {
-	if ($.isNumeric(a) && $.isNumeric(a)) {
-		return (parseInt(a) * parseInt(b));
-	} else {
-		return null;
-	}
-}
-
+/***************************************************************************************************
+ * Requires Jquery
+ * 
+ * @test http://jsfiddle.net/JE83M/3/
+ **************************************************************************************************/
 function numericOrMinusOne(a) {
-	if ($.isNumeric(a)) {
-		return parseInt(a)
-	} else {
-		return -1
-	}
+	return numericOrDefault(a, -1)
 }
 
+/***************************************************************************************************
+ * Requires Jquery
+ * 
+ * @test http://jsfiddle.net/JE83M/2/
+ **************************************************************************************************/
 function numericOrDefault(a, defaultValue) {
 	if ($.isNumeric(a)) {
-		return parseInt(a)
+		return parseFloat(a)
 	} else {
 		return defaultValue
 	}
 }
-
 /* Return all the inner html of the elements in an array of elements */
 function getAllHtml(elements) {
 
@@ -557,6 +569,26 @@ String.prototype.contains = function(it) {
 	return this.indexOf(it) != -1;
 };
 
+/***************************************************************************************************
+ * @require JQuery
+ * @test http://jsfiddle.net/W2Dys/
+ **************************************************************************************************/
+Array.prototype.contains = function(value, ignoreCase) {
+	if (ignoreCase) {
+		var contains = false
+		var lowerValue = value.toLowerCase();
+		$.each(this, function(index, element) {
+			if (element.toLowerCase() == lowerValue) {
+				contains = true;
+				return false;
+			}
+		})
+		return contains
+	} else {
+		return (this.indexOf(value) != -1)
+	}
+};
+
 // error management, use webStorage, only supported in Internet Explorer 8+, Firefox, Opera, Chrome,
 // and Safari.
 
@@ -899,8 +931,6 @@ function changeInfoMesage(type, message) {
 
 }
 
-validate.js
-
 /**
  * Jquery hack to make contenteditable have some propeties normally reserved for input (forexample
  * autocompleate)
@@ -1176,5 +1206,13 @@ function cleanIfNotNumber(params) {
 			}
 
 		})
+	}
+}
+
+function isString(str) {
+	if (jQuery.type(str) == 'string') {
+		return true
+	} else {
+		return false;
 	}
 }
