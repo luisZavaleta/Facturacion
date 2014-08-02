@@ -39,14 +39,17 @@ function validate(params) {
 }
 
 /***************************************************************************************************
+ * All the contraits try to emulate Grails contraints, but the behavior might be different.
+ * 
  * @param type:
  *        type of the element
  * @param value:
- *        val()
- * @param list:
- *        Array used only with inList type
+ *        base object val()
+ * @param referee:
+ *        Object that contains a value that will be use as a base for the comparation (can eb a
+ *        lisr, regular expression, a object, etc)
  * @params ignoreCase : Boolean
- */
+ **************************************************************************************************/
 function validate2(params) {
 
 	switch (type) {
@@ -61,11 +64,14 @@ function validate2(params) {
 		case 'email':
 			return validateEmail(params.value, params.ignoreCase)
 			break;
-		case 'inList': validateInList(params.list, params.value, params.ignoreCase) 
+		case 'inList':
+			return validateInList(params.value, params.referee, params.ignoreCase)
 			break;
 		case 'matches':
+			return ((params.value).search(params.referee) > 0)
 			break;
 		case 'max':
+			return validateMax(params.value, params.referee, params.ignoreCase)
 			break;
 		case 'maxSize':
 			break;
@@ -94,13 +100,13 @@ function validateCreditCard(value, ignoreCase) {
 
 	if (ignoreCase) {
 		if (value
-				.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/gi)) {
+				.search(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/gi) > 0) {
 			return true;
 		}
 
 	} else {
 		if (value
-				.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/g)) {
+				.search(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/g) > 0) {
 			return true;
 		}
 	}
@@ -114,23 +120,23 @@ function validateEmail(value, ignoreCase) {
 		return false;
 	}
 
-	if (!value && value instanceof String) {
+	if (!value && $.type(value) == 'string') {
 		return false;
 	}
 
 	if (ignoreCase) {
-		if (value.match(/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/gi)) {
+		if (value.search(/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/gi) > 0) {
 			return true;
 		}
 	} else {
-		if (value.match(/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/g)) {
+		if (value.search(/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})*$/g) > 0) {
 			return true;
 		}
 	}
 	return false;
 }
 
-function validateInList(list, value, ignoreCase) {
+function validateInList(value, list, ignoreCase) {
 
 	if (!value || !list || jQuery.type(list) != 'array') {
 		return false;
@@ -139,3 +145,123 @@ function validateInList(list, value, ignoreCase) {
 	return list.contains(value, ignoreCase)
 
 }
+
+function validateMatches(value, regex) {
+
+	if (!value || !regex) {
+		return false;
+	}
+
+	if (value.search(regex) > 0) {
+		return true;
+	} else {
+
+		return false;
+	}
+
+}
+
+/***************************************************************************************************
+ * JUST USE THE > operator
+ **************************************************************************************************/
+
+function validateMax(value, referee, ignoreCase) {
+
+	var tempValue = value;
+	var tempReferee = referee;
+
+	if ($.type(value) != value$.type(referee)) {
+		return false
+	}
+
+	if (!!ignoreCase) {
+
+		if ($.type(value) == 'string') {
+			tempValue = tempValue.toLoweCase()
+			tempReferee = tempReferee.toLoweCase()
+		} else {
+			throw "InvalidParameterException - ignoreCase"
+		}
+	}
+
+	return (tempValue <= tempReferee)
+
+}
+
+function validateMaxSize(value, referee) {
+
+	if ($.type(value) != 'string' && $.type(value) != 'array') {
+		return false;
+	}
+
+	if ($.type(value) != value$.type(referee)) {
+		return false;
+	}
+	// length
+
+	return (value.length <= referee.length)
+
+}
+
+
+
+
+function validateMin(value, referee, ignoreCase) {
+
+	var tempValue = value;
+	var tempReferee = referee;
+
+	if ($.type(value) != value$.type(referee)) {
+		return false
+	}
+
+	if (!!ignoreCase) {
+
+		if ($.type(value) == 'string') {
+			tempValue = tempValue.toLoweCase()
+			tempReferee = tempReferee.toLoweCase()
+		} else {
+			throw "InvalidParameterException - ignoreCase"
+		}
+	}
+
+	return (tempValue >= tempReferee)
+
+}
+
+function validateMinSize(value, referee) {
+
+	if ($.type(value) != 'string' && $.type(value) != 'array') {
+		return false;
+	}
+
+	if ($.type(value) != value$.type(referee)) {
+		return false;
+	}
+	// length
+
+	return (value.length >= referee.length)
+
+}
+
+
+
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
