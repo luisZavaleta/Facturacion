@@ -16,7 +16,7 @@ table tr td {
 
 .factura-container {
 	width: 7.02in !important;
-	height: 9.7in !important;
+	min-height: 9.7in !important;
 	float: none !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
@@ -194,6 +194,7 @@ table.table-productos tr.title  td.importe {
 }
 
 table.table-opcional {
+	margin-top: 7px;
 	width: 7.02in;
 	float: left;
 	bottom: 5px;
@@ -214,7 +215,8 @@ table.table-datos-sat {
 }
 
 .factura-bottom {
-	position: absolute;
+	margin-top: 20px;
+	position: relative;
 	bottom: 0;
 }
 
@@ -228,6 +230,12 @@ table.table-datos-empresa {
 	margin-top: 10px;
 	float: right;
 	width: 78%;
+}
+
+table.table-datos-empresa2 {
+	margin-top: 10px;
+	float: right;
+	width: 100%;
 }
 
 .left-title {
@@ -290,7 +298,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 					</tr>
 				</tbody>
 			</table>
-			<div class="logo-company">LOGO DE LA COMPAÑIA</div>
+			<div class="logo-company">LOGO Y NOMBRE DE LA COMPAÑIA</div>
 			<table class="table-0 bordered">
 				<tbody>
 					<tr>
@@ -394,7 +402,9 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						<td class="importe colored">Importe</td>
 					</tr>
 				</thead>
-				<tbody style="height: 150px; min-height: 150px;">
+				<tbody style="height: 290px; min-height: 290px;">
+				
+			
 					<g:each in="${data?.productos}">
 						<tr>
 							<td class="parte">
@@ -509,77 +519,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</tr>
 					</tbody>
 				</table>
-				<table class="table-forma-pago bordered">
-					<tbody>
-						<tr>
-							<td class="colored">Forma de Pago</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="metodoDePago"> ${ data?.formaPago ?: 'Efectivo'}
-								</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="colored">No de Cuenta</td>
-						</tr>
-						<tr>
-							<td class="NumCtaPago">
-								${ data?.noCuenta ?: 'No aplica'}
-							</td>
-						</tr>
-						<tr style="height: 45px" class="formaDePago">
-							<td class="colored">Pago en una sola exibición.</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="table-datos-empresa bordered">
-					<tbody>
-						<tr>
-							<td class="colored" colspan="4">Domicilio</td>
-						</tr>
-						<tr>
-							<td class="domicilio-emisor" colspan="4">
-								<g:render template="factura/domicilio"/>
-							</td>
-						</tr>
-						<tr>
-							<td class="colored" colspan="4">Lugar de expedición</td>
-						</tr>
-						<tr>
-							<td class="lugar-expedicion" colspan="4">
-								<g:render template="factura/domicilio"/>
-							</td>
-						</tr>
-						<tr class="border-top">
-							<td class="b-top  colored border-right " style="width: 25%">RFC</td>
-							<td class="b-top  colored border-right " style="width: 25%">Teléfono</td>
-							<td class="b-top  colored border-right " style="width: 25%">Correo</td>
-							<td class="b-top colored" style="width: 25%">Web</td>
-						</tr>
-						<tr>
-							<td class="border-right">
-								${ data?.rfcEmisor}
-							</td>
-							<td class="border-right telefono-emisor">
-								${ data?.telefono ?: '---'}
-							</td>
-							<td class="border-right correo-emisor">
-								${ data?.correo ?: '---'}
-							</td>
-							<td class="web-emisor">
-								${ data?.web ?: '---'}
-							</td>
-						</tr>
-						<tr class="border-top" style="text-align: center">
-							<td colspan="4" class="b-top">
-								<strong> ESTE DOCUMENTO ES UNA REPRESENTACIÓN IMPRESA
-									DE UN CFDI </strong>
-								.
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<g:render template="factura/footer1" />
 			</div>
 		</div>
 	</div>

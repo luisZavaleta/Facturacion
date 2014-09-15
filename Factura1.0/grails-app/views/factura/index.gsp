@@ -10,47 +10,8 @@
 <r:require modules="modalVulcano" />
 <meta name="layout" content="main" />
 <title>-</title>
-<%--
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'jquery-ui.min.css')}"
-	type="text/css">
-	
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'bootstrap.min.css')}"
-	type="text/css">
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'btn-factura.css')}" type="text/css">
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'bootstrap-modal-bs3patch.css')}"
-	type="text/css">
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'bootstrap-modal.css')}"
-	type="text/css">
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'jasny-bootstrap.min.css')}"
-	type="text/css">
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'factura-index.css')}"
-	type="text/css">
-	--%>
+
 <g:javascript src="listas.js" />
-<%--
-<g:render template="/factura/css" />
-
-<g:javascript src="jquery-2.0.3.min.js.old" />
-<g:javascript src="jquery-ui.min.js.old" />
-
-<g:javascript src="vulcano-util.js" />
-<g:javascript src="factura2.js" />
-<g:javascript src="generar-factura.js" />
-<g:javascript src="botones-laterales.js" />
-
-<g:javascript src="bootstrap.min.js.old" />
-
-<g:javascript src="bootstrap-modalmanager.js" />
-<g:javascript src="bootstrap-modal.js" />
-<g:javascript src="jasny-bootstrap.min.js" />
---%>
 <g:javascript src="big.min.js" />
 </head>
 <body>
