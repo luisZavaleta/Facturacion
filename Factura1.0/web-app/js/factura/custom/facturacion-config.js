@@ -130,6 +130,7 @@ metodoDePago.autocompleate = metodoPago
 
 numCtaPago.selector = ".NumCtaPago"
 numCtaPago.defaultValue = "No aplica"
+addBaseOption(numCtaPago)
 
 telefonoEmisor.selector = ".telefono-emisor"
 telefonoEmisor.defaultValue = "---"
