@@ -44,6 +44,8 @@ conceptos.trHtml = getConceptosTr()
 conceptos.defaultValue = "---"
 conceptos.skip = [ 6 ]
 
+structure.logo = getLogoParams();
+
 structure.fields = [ regimenFiscal, nombreReceptor, rfcReceptor, calleReceptor, intReceptor, extReceptor, coloniaReceptor,
 		cpReceptor, ciudadReceptor, estadoReceptor, paisReceptor, custom1, custom2, metodoDePago, numCtaPago,
 		telefonoEmisor, correoEmisor, webEmisor ]
@@ -153,17 +155,34 @@ var webEmisor = {}
 
 function getConceptosTr() {
 	var conceptosTr = multiline(function() {/*
-				<tr class="title">
-					<td contenteditable="true">---</td>
-					<td class="cantidad" contenteditable="true">---</td>
-					<td contenteditable="true">---</td>
-					<td class="descripcion" contenteditable="true">---</td>
-					<td class="unidad" contenteditable="true">---</td>
-					<td class="valorUnitario" contenteditable="true">---</td>
-					<td class="importe">0</td>
-				</tr>
-					*/
+							<tr class="title">
+								<td contenteditable="true">---</td>
+								<td class="cantidad" contenteditable="true">---</td>
+								<td contenteditable="true">---</td>
+								<td class="descripcion" contenteditable="true">---</td>
+								<td class="unidad" contenteditable="true">---</td>
+								<td class="valorUnitario" contenteditable="true">---</td>
+								<td class="importe">0</td>
+							</tr>
+								*/
 	});
 
 	return conceptosTr;
+}
+
+function getLogoParams() {
+
+	var imageParams = {}
+
+	imageParams.isLogo = true
+
+	imageParams.selector = ".logo-company img"
+	imageParams.event = "click"
+	imageParams.css = {
+		"width" : '2.62in',
+		"height" : '100px'
+	}
+
+	return imageParams;
+
 }

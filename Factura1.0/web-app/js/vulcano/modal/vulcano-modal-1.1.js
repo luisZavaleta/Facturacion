@@ -7,6 +7,15 @@
  **************************************************************************************************/
 
 /**
+ * Open modal function contant some temporal values that will ve valid only in the scope of a modal,
+ * it should be created before the modal windows opens and cleared after the modal window is closes.
+ */
+var vulcanoModalParams = {}
+vulcanoModalParams.element = null;
+vulcanoModalParams.openFunction = null;
+vulcanoModalParams.closeFunction = null;
+
+/**
  * Opens a modal to change some address
  * 
  * @selector: Selector of the element to be clicked in order to open the modal.
@@ -17,6 +26,50 @@
  * @mainpageContainer: Selector of the container where the elements will be stored onece the user
  *                     click the "save" button, default selector.
  */
+
+var vulcanoModal = {}
+
+vulcanoModal.getElement = function() {
+
+	console.log("ELEMENT TRES=====>");
+
+	console.log(vulcanoModalParams.element)
+	return vulcanoModalParams.element;
+
+}
+
+vulcanoModal.init = function(params) {
+
+	console.log("Vulcano Modal INIT ")
+	console.log(params)
+
+	addBaseModal();
+	if (params.element) {
+		vulcanoModalParams.element = params.element;
+
+		console.log("vulcanoModalParams.element")
+		console.log(params.element)
+		console.log(vulcanoModalParams.element)
+	}
+	if (params.openFunction) {
+		vulcanoModalParams.openFunction = params.openFunction;
+	}
+	if (params.closeFunction) {
+		vulcanoModalParams.closeFunction = params.closeFunction;
+	}
+
+	$("#vulcano-modal .modal-body").html(params.modalHtml);
+
+	console.log("OOOOPPPPPPEEEENNNNIIIIINNNNGGGGG=============>");
+	$("#vulcano-modal").modal({
+
+	});
+
+	saveModal(params.closeFunction)
+	// closeModalEvent(params.closingFunction);
+
+}
+
 function openModalVulcano(params) {
 
 	if (!params.modalSelector) {
@@ -57,7 +110,6 @@ function closeModalVulcano(params) {
 	console.log("closeModalVulcano======>")
 
 	$(document).off("click", params.modalSelector + " .guardar-modal");
-
 	$(document).on("click", params.modalSelector + " .guardar-modal", function() {
 
 		console.log("GUARDANDO== a====> OUT")
@@ -125,9 +177,64 @@ function getModalHtml() {
 
 }
 
+/**
+ * Add modal to the webPage, for editing purposes when contenteditable is not enough
+ */
 function addBaseModal() {
 	var htmlModal = getModalHtml();
 	$("body").append(htmlModal);
+}
+
+/**
+ * Clear domElementModal Globar variable used for storing the element that trigered the modal.
+ */
+function closeModalEvent(closingFunction) {
+	$("#vulcano-modal").on('hidden.bs.modal', function(e) {
+		if (!!closingFunction) {
+			closingFunction();
+		}
+
+		// domElementModal = null; // domElementModal was used to store the element that trigered
+		// the
+		// modal window.
+	});
+}
+
+// Save button for the modal
+function saveModal(closeFunction) {
+
+	console.log("SAVE MODAL XD")
+
+	$(document).on("click", ".guardar-modal-vcms", function() {
+
+		console.log("Closing modal... ... ...");
+
+		if (!!closeFunction) {
+			closeFunction();
+		}
+
+		$(document).on("modal.setImage.after", function() {
+			cleanModalParams();
+		})
+
+	});
+
+}
+
+/**
+ * Cleans everything global variables and othher stuffs created in this modal.
+ */
+function cleanModalParams() {
+
+	console.log("CLEAN MODAL PARAMS")
+	vulcanoModalParams.element = null;
+	vulcanoModalParams.openFunction = null;
+	vulcanoModalParams.closeFunction = null;
+
+	$(document).off("click", ".guardar-modal-vcms");
+	$(document).off("modal.setImage.after");
+	$("#vulcano-modal .modal-body").html("");
+
 }
 
 /***************************************************************************************************

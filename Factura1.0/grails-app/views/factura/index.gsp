@@ -8,6 +8,7 @@
 <r:require modules="indexcss" />
 <r:require modules="jasny" />
 <r:require modules="modalVulcano" />
+
 <meta name="layout" content="main" />
 <title>-</title>
 
@@ -37,39 +38,33 @@
 								class="texto">GENERAR FACTURA</span> <span></span>
 						</a>
 					</div>
-					<div class="col-md-12 boton config">
-						<a href="#"
-							class="btn btn-block btn-factura btn-dos nota-remision">
-							<span class="glyphicon glyphicon-tasks"></span> <span
-								class="texto">REMISIÓN</span>
-						</a>
-					</div>
+					
 					<div class="col-md-12 boton clientes">
 						<a href="#responsive" class="btn btn-block btn-factura btn-uno">
 							<span class="glyphicon glyphicon-user"></span> <span
-								class="texto">CLIENTES</span> <span></span>
+								class="texto">DATOS DE CLIENTES</span> <span></span>
 						</a>
 					</div>
-					<%--
+				
 					<div class="col-md-12 boton config">
 						<a href="#" class="btn btn-block btn-factura btn-dos">
 							<span class="glyphicon glyphicon-cog"></span>
-							<span class="texto">CONFIGURACIÓN</span>
+							<span class="texto">CONFIGURACIÓN DEL SITEMA</span>
 						</a>
 					</div>
-					--%>
+				
 					<div class="col-md-12 boton">
 						<a href="#"
 							class="btn btn-block btn-factura btn-info editar-facturas">
 							<span class="glyphicon glyphicon-eye-open"></span> <span
-								class="texto">EDITAR</span>
+								class="texto">VER Y CANCELAR FACTURAS</span>
 						</a>
 					</div>
 					<div class="col-md-12 boton">
 						<a href="#"
 							class="btn btn-block btn-factura btn-cua btn-producto-x">
 							<span class="glyphicon glyphicon-barcode"></span> <span
-								class="texto">PRODUCTOS</span>
+								class="texto">DATOS DE LOS PRODUCTOS</span>
 						</a>
 					</div>
 				</div>

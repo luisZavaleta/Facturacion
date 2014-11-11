@@ -1,4 +1,4 @@
-	
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -298,7 +298,9 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 					</tr>
 				</tbody>
 			</table>
-			<div class="logo-company">LOGO Y NOMBRE DE LA COMPAÑIA</div>
+			<div class="logo-company">
+				<img alt="" src="images/grails_logo.jpg" style="width: 100%; height: 100%" />
+			</div>
 			<table class="table-0 bordered">
 				<tbody>
 					<tr>
@@ -341,8 +343,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 							<span class="rfc-receptor"> ${ data?.rfcReceptor ?: 'Escriba el RFC del Cliente'}
 							</span>
 						</td>
-						<td colspan="1" class="fecha colored  border-color-left">Fecha
-							expedición</td>
+						<td colspan="1" class="fecha colored  border-color-left">Fecha expedición</td>
 					</tr>
 					<tr>
 						<td class="colored right-title">Calle:</td>
@@ -403,8 +404,6 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 					</tr>
 				</thead>
 				<tbody style="height: 290px; min-height: 290px;">
-				
-			
 					<g:each in="${data?.productos}">
 						<tr>
 							<td class="parte">
@@ -423,18 +422,15 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 								${it.unidad}
 							</td>
 							<td class="unitario">
-								<g:formatNumber number="${(it.unitario)?.toBigDecimal()}"
-									format="###,###.00" />
+								<g:formatNumber number="${(it.unitario)?.toBigDecimal()}" format="###,###.00" />
 							</td>
 							<td class="importe  no-border-right">
-								<g:formatNumber number="${(it.importe)?.toBigDecimal()}"
-									format="###,###.00" />
+								<g:formatNumber number="${(it.importe)?.toBigDecimal()}" format="###,###.00" />
 							</td>
 						</tr>
 					</g:each>
 					<tr class="dummie">
-						<td
-							style="overflow: hidden; height: 0px ! important; max-height: 0px ! important;"></td>
+						<td style="overflow: hidden; height: 0px ! important; max-height: 0px ! important;"></td>
 					</tr>
 				</tbody>
 				<tfoot>
@@ -442,8 +438,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						<td colspan="4" class="colored b-top">Importe con letras</td>
 						<td colspan="2" class="colored b-top right-title ">Subtotal:</td>
 						<td class="b-top subtotal">
-							<g:formatNumber number="${(data?.subtotal)?.toBigDecimal() ?:0 }"
-								format="\$ ###,###.00" />
+							<g:formatNumber number="${(data?.subtotal)?.toBigDecimal() ?:0 }" format="\$ ###,###.00" />
 						</td>
 					</tr>
 					<tr>
@@ -452,15 +447,13 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						</td>
 						<td colspan="1" class="colored b-top right-title">I.V.A:</td>
 						<td class="b-top iva">
-							<g:formatNumber number="${(data?.iva)?.toBigDecimal() ?: 0}"
-								format="\$ ###,###.00" />
+							<g:formatNumber number="${(data?.iva)?.toBigDecimal() ?: 0}" format="\$ ###,###.00" />
 						</td>
 					</tr>
 					<tr>
 						<td colspan="1" class="colored b-top right-title">Total:</td>
 						<td class="b-top total">
-							<g:formatNumber number="${(data?.total)?.toBigDecimal() ?: 0}"
-								format="\$ ###,###.00" />
+							<g:formatNumber number="${(data?.total)?.toBigDecimal() ?: 0}" format="\$ ###,###.00" />
 						</td>
 					</tr>
 				</tfoot>
@@ -485,14 +478,12 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 						<tr>
 							<td rowspan="7" class="bcode border-right">
 								<div>
-									<img src="${data?.qrCode}" style="border: 0px"
-										alt="El codigo de barras se generará automaticamente" />
+									<img src="${data?.qrCode}" style="border: 0px" alt="El codigo de barras se generará automaticamente" />
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<td class="colored active b-left center-title">SELLO DÍGITAL
-								DEL EMISOR</td>
+							<td class="colored active b-left center-title">SELLO DÍGITAL DEL EMISOR</td>
 						</tr>
 						<tr>
 							<td class="sello-digital-emisor break-word">
@@ -500,8 +491,7 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 							</td>
 						</tr>
 						<tr>
-							<td class="colored b-left center-title">SELLO DIGITAL DEL
-								SAT</td>
+							<td class="colored b-left center-title">SELLO DIGITAL DEL SAT</td>
 						</tr>
 						<tr>
 							<td class="sello-digital-sat break-word">
@@ -509,8 +499,8 @@ table.table-productos tr td.importe,table.table-productos tr td.subtotal,table.t
 							</td>
 						</tr>
 						<tr>
-							<td class="colored b-left center-title break-word">CADENA
-								ORIGINAL DE COMPLEMENTO DE CERTIFICADO DIGITAL DEL SAT</td>
+							<td class="colored b-left center-title break-word">CADENA ORIGINAL DE COMPLEMENTO DE CERTIFICADO DIGITAL DEL
+								SAT</td>
 						</tr>
 						<tr>
 							<td class=" break-word cadena-original">

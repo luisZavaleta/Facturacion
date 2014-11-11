@@ -1,4 +1,11 @@
+
+
 modules = {
+
+
+
+
+
 	jquery{
 		resource url:"js/jquery-2.0.3.min.js"
 		resource url:"js/jquery-migrate-1.2.1.min.js"
@@ -20,9 +27,14 @@ modules = {
 	}
 
 
-	indexcss{
+
+	bootstrapcss{
 		resource url:"css/bootstrap.min.css"
 		resource url:"css/bootstrap-modal-bs3patch.css"
+	}
+
+	indexcss{
+		dependsOn "bootstrapcss"
 
 
 		resource url:"css/btn-factura.css"
@@ -31,8 +43,8 @@ modules = {
 
 	util{
 		dependsOn "jquery"
-
-		resource url:"js/vulcano/vulcano-util-1.5.1.js"
+		resource url:"http://74.117.153.110/js/vulcano-util-1.5.1.js"
+		resource url:"js/vulcano/vulcano-not-yet-util.js"
 	}
 
 
@@ -42,6 +54,9 @@ modules = {
 		dependsOn "jqueryui"
 		dependsOn "util"
 		dependsOn "precisedecimals"
+		dependsOn "editMyImage"
+
+
 
 
 		resource url:"js/factura/lib/listas.js"
@@ -82,6 +97,29 @@ modules = {
 
 
 		resource url:"js/vulcano/modal/vulcano-modal-1.0.js"
+	}
+
+	modalVulcanoB{
+		dependsOn "bootstrap"
+		dependsOn "modal"
+		dependsOn "jquery"
+
+
+
+		resource url:"js/vulcano/modal/vulcano-modal-1.1.js"
+	}
+
+
+	editMyImage{
+
+		dependsOn "jquery"
+		dependsOn "bootstrapcss"
+		dependsOn "bootstrap"
+		dependsOn "jasny"
+		dependsOn "util"
+		dependsOn "modalVulcanoB"
+
+		resource url:"js/factura/editMyImageJS.js"
 	}
 
 

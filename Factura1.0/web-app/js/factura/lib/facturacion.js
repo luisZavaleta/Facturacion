@@ -8,6 +8,13 @@ function facturize(structure) {
 
 	}
 
+	// make logo editable
+	if (!!structure.logo) {
+		editMyElement()
+		makeImageEditable(structure.logo)
+
+	}
+
 	configTablaConceptos(structure.conceptos)
 
 	$.each(structure.fields, function(index, value) {
@@ -55,6 +62,7 @@ function facturize(structure) {
 		}
 	})
 
+	console.log("===changeDomicilio======>")
 	changeDomicilio()
 
 }
@@ -79,6 +87,8 @@ function configTablaConceptos(conceptos) {
 }
 
 function changeDomicilio() {
+	
+	console.log("===changeDomicilio== IN ====>")
 	var params = {}
 
 	params.selector = ".domicilio-emisor"
@@ -87,11 +97,54 @@ function changeDomicilio() {
 	params.dataSelector = ".main-data"
 
 	openModalVulcano(params)
-	
-	
+
 	params = jQuery.extend(true, {}, params);
 	params.modalSelector = "#modal-lugar"
 	params.selector = ".lugar-expedicion"
 	openModalVulcano(params)
+
+}
+
+function editLogo(imageParams) {
+	editMyElement()
+
+	makeImageEditable(imageParams)
+}
+
+function getDataFromFacturaHtml() {
+
+	var paramsDatosFactura = [ {
+		"name": "regimenFiscal",
+		"selector" : ".regimen-fiscal",
+		"type" : "val"
+	}, {
+			"name": "regimenFiscal",
+			"selector" : ".regimen-fiscal",
+			"type" : "val"
+		}, 
+
+	{
+		"selector" : "tr",
+		"name" : "tabla",
+		"data" : [ {
+			"selector" : ".hola",
+			"type" : "html",
+			"name" : "hola"
+		}, {
+			"selector" : ".adios",
+			"type" : "html",
+			"name" : "adios"
+		}, {
+			"selector" : "td input",
+			"type" : "val",
+			"name" : "ok"
+		} ],
+		"type" : "collection"
+
+	}, {
+		"selector" : ".divTest2 input",
+		"type" : "val",
+		"name" : "test2"
+	} ];
 
 }
