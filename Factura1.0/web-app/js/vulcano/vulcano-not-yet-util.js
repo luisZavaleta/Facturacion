@@ -4,6 +4,9 @@ vulcanoUtil.clone = function clone(obj) {
 	return jQuery.extend(true, {}, obj);
 };
 
+
+
+
 /**
  * Get information from a HTML page, it could get the value of an input or the html of a
  * contenteditable element.
@@ -95,3 +98,11 @@ vulcanoUtil.getDataFromForm = function(elements) {
 
 	return data;
 };
+
+/**
+ * Used to verify if a jquery object really exists, for example $('#notAnElement') returns [object
+ * Object], but is an object with 0 elements.
+ */
+$.fn.exists = function() {
+	return this.length !== 0;
+}

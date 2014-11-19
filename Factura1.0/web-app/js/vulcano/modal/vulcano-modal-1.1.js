@@ -15,41 +15,49 @@ vulcanoModalParams.element = null;
 vulcanoModalParams.openFunction = null;
 vulcanoModalParams.closeFunction = null;
 
-/**
- * Opens a modal to change some address
- * 
- * @selector: Selector of the element to be clicked in order to open the modal.
- * @modalSelector: Selector of the modal html (Must be hidden in the main page)
- * @title: Title of the modal
- * @dataId: Id used to differenciate a modal from another when is closed if not defined then it use
- *          the selector
- * @mainpageContainer: Selector of the container where the elements will be stored onece the user
- *                     click the "save" button, default selector.
- */
-
 var vulcanoModal = {}
 
 vulcanoModal.getElement = function() {
-
-	console.log("ELEMENT TRES=====>");
-
-	console.log(vulcanoModalParams.element)
 	return vulcanoModalParams.element;
 
 }
 
-vulcanoModal.init = function(params) {
-
-	console.log("Vulcano Modal INIT ")
-	console.log(params)
-
+/**
+ * @return {void}
+ */
+vulcanoModal.init = function() {
 	addBaseModal();
+
+}
+
+/**
+ * Function to be executed before the modal opens, it change the html of the modal and add all the
+ * recesary variables, also clean everything once the modal is closed. // *
+ * 
+ * @param {HTMLElement} element: Selector of the clickable element that will be triger the opening
+ *        of the modal.
+ * @param {function()} openFunction: Function that will be executed before the element opens.
+ * @param {function()} closeFunction: Function that will be executed before the element close.
+ * @param {String} modalHtml: Html that will be setted in the body of the modal, before the modal
+ *        opens.
+ * @param {JSONObject} css: CSS that we want to aply to an element once the modal is created, we add
+ *        a extra attribute called selected that indicates the delector of the elements in which the
+ *        css will be applied. Example: <br>
+ *        <code>
+ * 				imageParams.css = {
+ * 					"selector" : ".fileinput-new img, .fileinput-preview img",
+ *					"width" : '2.63in',
+ *					"height" : '100px'
+ *				}
+ * 		</code>
+ */
+vulcanoModal.openModal = function(params) {
+
+	modalEvents()
+
+	console.log(JSON.stringify())
 	if (params.element) {
 		vulcanoModalParams.element = params.element;
-
-		console.log("vulcanoModalParams.element")
-		console.log(params.element)
-		console.log(vulcanoModalParams.element)
 	}
 	if (params.openFunction) {
 		vulcanoModalParams.openFunction = params.openFunction;
@@ -60,107 +68,47 @@ vulcanoModal.init = function(params) {
 
 	$("#vulcano-modal .modal-body").html(params.modalHtml);
 
-	console.log("OOOOPPPPPPEEEENNNNIIIIINNNNGGGGG=============>");
+	setModalCss(params.css)
+
+	$('#vulcano-modal').bind("DOMSubtreeModified", function() {
+		setModalCss(params.css)
+	});
+
 	$("#vulcano-modal").modal({
 
 	});
 
-	saveModal(params.closeFunction)
+	// saveModal(params.closeFunction)
 	// closeModalEvent(params.closingFunction);
-
-}
-
-function openModalVulcano(params) {
-
-	if (!params.modalSelector) {
-		params.modalSelector = "#vulcano-modal"
-	}
-
-	if (!params.dataId) {
-		params.dataId = params.selector
-	}
-
-	if (!params.mainpageContainer) {
-		params.mainpageContainer = params.selector
-	}
-
-	$(params.selector).on("click", function() {
-		$(params.modalSelector).attr("data-id", params.dataId)
-		$(params.modalSelector).attr("data-container", params.dataId)
-		$(params.modalSelector + ' .modal-title').html(params.title)// convention over configuration
-		$(params.modalSelector).modal({
-			show : true,
-			keyboard : false
-		})
-	})
-
-	console.log("closeModalVulcano===(params)===>")
-	closeModalVulcano(params)
 }
 
 /**
- * @selector: Selector of the element to be clicked in order to open the modal.
- * @modalSelector: Selector of the modal html (Must be hidden in the main page)
- * @dataSelector: Optiona, define a common inner sub-selector, while main data will be store using
- *                this sub-selector, data-modal prefix and data-modal-sufix won't use it.
+ * @params selector: Selector of the element that all the css attributes will be applied on, if null
+ *         then css attributes will be applied over ".modal-body-vcms" that is the modal body
+ *         container.
+ * @params x: Any css valid attribute.
  */
-var cont = 0;
-function closeModalVulcano(params) {
+function setModalCss(params) {
 
-	console.log("closeModalVulcano======>")
+	if (!!params) {
+		if (!params.selector) {
+			params.selector = ".modal-body-vcms"
+		}
 
-	$(document).off("click", params.modalSelector + " .guardar-modal");
-	$(document).on("click", params.modalSelector + " .guardar-modal", function() {
+		for (variable in params) {
+			if (params.hasOwnProperty(variable) && variable != "selector") {
 
-		console.log("GUARDANDO== a====> OUT")
+				$(params.selector).css(variable, params[variable])
 
-		$('input[data-main-selector]').each(function(index, value) {
-
-			console.log("GUARDANDO== a====>" + cont++)
-			var val = $(value).val()
-			var element = $(params.selector + " " + $(this).attr("data-main-selector"))
-
-			if (!val) {
-
-				if (!!params.dataSelector) {
-
-					var span = element.find(params.dataSelector).detach()
-					span.empty()
-					element.empty()
-					element.append(span)
-
-				}
-
-				return true;
 			}
-
-			if (!!params.dataSelector) {
-
-				var span = element.find(params.dataSelector).detach()
-
-				element.empty()
-				element.append(span)
-				element.find(params.dataSelector).html(val)
-
-				element = element.find(params.dataSelector)
-
-			} else {
-				element.html(val)
-			}
-
-			if ($(this).attr("data-modal-prefix")) {
-				element.before($(this).attr("data-modal-prefix"))
-			}
-
-			if ($(this).attr("data-modal-sufix")) {
-				element.after($(this).attr("data-modal-sufix"))
-			}
-
-		})
-	})
+		}
+	}
 
 }
 
+/**
+ * @returns {String} Base modal html.
+ */
 function getModalHtml() {
 
 	var html = '';
@@ -178,46 +126,44 @@ function getModalHtml() {
 }
 
 /**
- * Add modal to the webPage, for editing purposes when contenteditable is not enough
+ * Add base modal html to the webpage.
  */
 function addBaseModal() {
-	var htmlModal = getModalHtml();
-	$("body").append(htmlModal);
+	var modal = $("#vulcano-modal");
+
+	if (!modal.exists()) {
+		var htmlModal = getModalHtml();
+		$("body").append(htmlModal);
+	}
 }
 
 /**
- * Clear domElementModal Globar variable used for storing the element that trigered the modal.
+ * Manage different modal events.
+ * 
+ * @param {function} openFunction: Function to be executed instants after the modals open.
+ * @param {function} closeFunction: Function to be executes instants before the modals closes.
  */
-function closeModalEvent(closingFunction) {
-	$("#vulcano-modal").on('hidden.bs.modal', function(e) {
-		if (!!closingFunction) {
-			closingFunction();
+function modalEvents(openFunction, closeFunction) {
+
+	$("#vulcano-modal").on("show.bs.modal", function(e) {
+
+		if (!!vulcanoModalParams.openFunction) {
+			vulcanoModalParams.openFunction();
 		}
 
-		// domElementModal = null; // domElementModal was used to store the element that trigered
-		// the
-		// modal window.
-	});
-}
+	})
 
-// Save button for the modal
-function saveModal(closeFunction) {
+	$("#vulcano-modal").on("hide.bs.modal", function(e) {
 
-	console.log("SAVE MODAL XD")
-
-	$(document).on("click", ".guardar-modal-vcms", function() {
-
-		console.log("Closing modal... ... ...");
-
-		if (!!closeFunction) {
-			closeFunction();
+		if (!!vulcanoModalParams.closeFunction) {
+			vulcanoModalParams.closeFunction();
 		}
 
-		$(document).on("modal.setImage.after", function() {
-			cleanModalParams();
-		})
+	})
 
-	});
+	$("#vulcano-modal").on("hidden.bs.modal", function(e) {
+		cleanModalParams()
+	})
 
 }
 
@@ -226,7 +172,6 @@ function saveModal(closeFunction) {
  */
 function cleanModalParams() {
 
-	console.log("CLEAN MODAL PARAMS")
 	vulcanoModalParams.element = null;
 	vulcanoModalParams.openFunction = null;
 	vulcanoModalParams.closeFunction = null;
@@ -236,8 +181,3 @@ function cleanModalParams() {
 	$("#vulcano-modal .modal-body").html("");
 
 }
-
-/***************************************************************************************************
- * Elements in the modal most have the arttribute data-main-selector indicating the selector of the
- * main page, this selector must be inside the modalSelector.
- **************************************************************************************************/

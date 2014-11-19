@@ -126,6 +126,8 @@ function getModalHtml() {
 }
 
 function addBaseModal() {
+	
+	console.log("ADD BASE MODAL VULCANO MODAL 1.0")
 	var htmlModal = getModalHtml();
 	$("body").append(htmlModal);
 }

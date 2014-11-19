@@ -31,6 +31,8 @@ function addSaveButton(siteConfig) {
  * Add modal to the webPage, for editing purposes when contenteditable is not enough
  */
 function addBaseModal() {
+	
+	console.log("ADD VASE MODAL EDIT HTML HELPER")
 	var htmlModal = getModalHtml() // structure-help.js
 	$("body").append(htmlModal)
 }

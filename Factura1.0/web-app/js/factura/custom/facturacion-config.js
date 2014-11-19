@@ -179,7 +179,8 @@ function getLogoParams() {
 	imageParams.selector = ".logo-company img"
 	imageParams.event = "click"
 	imageParams.css = {
-		"width" : '2.62in',
+		"selector" : ".fileinput-new img, .fileinput-preview img",
+		"width" : '2.63in',
 		"height" : '100px'
 	}
 

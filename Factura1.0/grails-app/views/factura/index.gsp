@@ -7,7 +7,7 @@
 <r:require modules="index" />
 <r:require modules="indexcss" />
 <r:require modules="jasny" />
-<r:require modules="modalVulcano" />
+
 
 <meta name="layout" content="main" />
 <title>-</title>

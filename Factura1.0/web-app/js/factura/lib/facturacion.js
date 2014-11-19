@@ -10,9 +10,7 @@ function facturize(structure) {
 
 	// make logo editable
 	if (!!structure.logo) {
-		editMyElement()
 		makeImageEditable(structure.logo)
-
 	}
 
 	configTablaConceptos(structure.conceptos)
@@ -96,12 +94,12 @@ function changeDomicilio() {
 	params.modalSelector = "#modal-domicilio"
 	params.dataSelector = ".main-data"
 
-	openModalVulcano(params)
+	//openModalVulcano(params)
 
 	params = jQuery.extend(true, {}, params);
 	params.modalSelector = "#modal-lugar"
 	params.selector = ".lugar-expedicion"
-	openModalVulcano(params)
+	//openModalVulcano(params)
 
 }
 
