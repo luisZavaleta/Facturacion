@@ -4,9 +4,6 @@ vulcanoUtil.clone = function clone(obj) {
 	return jQuery.extend(true, {}, obj);
 };
 
-
-
-
 /**
  * Get information from a HTML page, it could get the value of an input or the html of a
  * contenteditable element.
@@ -105,4 +102,23 @@ vulcanoUtil.getDataFromForm = function(elements) {
  */
 $.fn.exists = function() {
 	return this.length !== 0;
+}
+
+/**
+ * @param templateid: html of the element that will be used as template. example: <br>
+ *        <code>
+ *      	<div id="mytemplate">
+ *				<p>%test%</p>
+ *				<p>%word%</p>
+ *			</div>
+ *  	</code>
+ * @param data
+ * @returns
+ * @xample document.getElementById("my").innerHTML=template("mytemplate",{test:"MYTEST",word:"MYWORD"})
+ * @source: http://stackoverflow.com/a/378001/597786
+ */
+vulcanoUtil.template = function(templateid, data) {
+	return templateid.replace(/%(\w*)%/g, function(m, key) {
+		return data.hasOwnProperty(key) ? data[key] : "";
+	});
 }
